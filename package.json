@@ -1,0 +1,13 @@
+{
+  "name": "asksgo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static multilingual Singapore senior schemes finder for SGO-style outreach.",
+  "scripts": {
+    "validate": "node --check app.js && node scripts/validate.mjs",
+    "build": "npm run validate"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
