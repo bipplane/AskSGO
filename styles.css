@@ -25,6 +25,7 @@ body {
     linear-gradient(135deg, #fff5ef 0%, #f3eee2 48%, #eaf4ef 100%);
   font-family: "Noto Sans", "Noto Sans SC", "Noto Sans Tamil", system-ui, sans-serif;
   letter-spacing: 0;
+  animation: pageTint 18s ease-in-out infinite;
 }
 
 button {
@@ -44,6 +45,7 @@ button {
   gap: 28px;
   align-items: stretch;
   min-height: calc(100vh - 56px);
+  animation: stageEnter 280ms ease-out both;
 }
 
 .hero-copy,
@@ -60,6 +62,9 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: calc(100vh - 56px);
+  min-height: 620px;
+  overflow-y: auto;
 }
 
 .kicker {
@@ -130,90 +135,12 @@ h1 {
 }
 
 .lang-button {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  display: grid;
+  place-items: center;
   font-size: clamp(1.05rem, 2vw, 1.45rem);
   font-weight: 800;
-}
-
-.flag-icon {
-  position: relative;
-  flex: 0 0 auto;
-  width: 38px;
-  height: 26px;
-  overflow: hidden;
-  border-radius: 4px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.16);
-}
-
-.flag-en {
-  background: linear-gradient(#df1e35 0 50%, #fff 50% 100%);
-}
-
-.flag-en::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 8px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #fff;
-}
-
-.flag-zh {
-  background: #de2910;
-}
-
-.flag-zh::before {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 7px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #ffde00;
-}
-
-.flag-ms {
-  background: repeating-linear-gradient(to bottom, #cc142b 0 2px, #fff 2px 4px);
-}
-
-.flag-ms::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto auto 0;
-  width: 18px;
-  height: 14px;
-  background: #012a87;
-}
-
-.flag-ms::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 5px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  box-shadow: 3px 0 0 #ffcc00;
-}
-
-.flag-ta {
-  background: linear-gradient(#ff9933 0 33%, #fff 33% 66%, #138808 66% 100%);
-}
-
-.flag-ta::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 16px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #000080;
+  text-align: center;
+  min-height: 74px;
 }
 
 .choice-button {
@@ -328,6 +255,7 @@ h1 {
 .results-stage {
   padding: clamp(20px, 4vw, 42px);
   min-height: calc(100vh - 56px);
+  animation: stageEnter 280ms ease-out both;
 }
 
 .topbar {
@@ -381,6 +309,7 @@ h1 {
 .choice-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 20px 0 24px;
+  animation: choicesEnter 320ms ease-out both;
 }
 
 .nav-row {
@@ -587,6 +516,68 @@ h1 {
   line-height: 1.5;
 }
 
+@keyframes pageTint {
+  0% {
+    background:
+      radial-gradient(circle at 10% 0%, rgba(255, 42, 1, 0.1), transparent 34%),
+      linear-gradient(135deg, #fff5ef 0%, #f3eee2 48%, #eaf4ef 100%);
+  }
+  33% {
+    background:
+      radial-gradient(circle at 12% 4%, rgba(255, 112, 65, 0.12), transparent 35%),
+      linear-gradient(135deg, #fff3eb 0%, #f4eadf 48%, #eef4ea 100%);
+  }
+  66% {
+    background:
+      radial-gradient(circle at 8% 2%, rgba(196, 84, 47, 0.1), transparent 34%),
+      linear-gradient(135deg, #fff6f0 0%, #f1ece1 48%, #eaf2ef 100%);
+  }
+  100% {
+    background:
+      radial-gradient(circle at 10% 0%, rgba(255, 42, 1, 0.1), transparent 34%),
+      linear-gradient(135deg, #fff5ef 0%, #f3eee2 48%, #eaf4ef 100%);
+  }
+}
+
+@keyframes stageEnter {
+  from {
+    opacity: 0;
+    transform: translateX(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes choicesEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .hero,
+  .question-stage,
+  .results-stage,
+  .choice-grid {
+    animation: none;
+  }
+
+  .choice-button,
+  .lang-button,
+  .action-button,
+  .link-button {
+    transition: none;
+  }
+}
+
 @media (max-width: 820px) {
   .app-shell {
     padding: 14px;
@@ -600,6 +591,12 @@ h1 {
 
   .sgo-logo-mark {
     min-height: 360px;
+  }
+
+  .hero-copy {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
   }
 
   .language-grid,

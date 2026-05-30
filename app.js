@@ -90,14 +90,13 @@
           <h1>${t("landing.title")}</h1>
           <p class="lead">${t("landing.lead")}</p>
           <div class="assurance-row">
-            <span>${t("landing.asset")}</span>
             <span>${t("landing.privacy")}</span>
             <span>${t("landing.checked")} ${VERIFIED_DATE}</span>
           </div>
           <div class="language-grid">
             ${Object.entries(i18n).map(([key, copy]) => `
               <button class="lang-button ${key === lang ? "selected" : ""}" type="button" data-lang="${key}" aria-pressed="${key === lang}">
-                <span class="flag-icon flag-${key}" aria-hidden="true"></span>${copy.meta.name}
+                <span>${copy.meta.name}</span>
               </button>
             `).join("")}
           </div>
@@ -440,11 +439,11 @@
           </article>
           <article class="review-card">
             <h2>Netlify</h2>
-            <p>Static app. Publish directory is project root. Build command validates JavaScript, JSON, source links, i18n keys, and required SGO-only asset.</p>
+            <p>Static app. Publish directory is project root. Build command validates JavaScript, JSON, source links, i18n keys, and required SGO logo file.</p>
           </article>
           <article class="review-card">
             <h2>Asset rule</h2>
-            <p>UI uses official SGO logo asset from AIC CDN only. No synthetic or generated bitmap images remain in project files.</p>
+            <p>UI uses the SGO logo from AIC CDN. No synthetic or generated bitmap images remain in project files.</p>
           </article>
         </div>
         <section class="source-list">
