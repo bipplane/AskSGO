@@ -222,11 +222,6 @@ h1 {
   width: min(72%, 480px);
   height: auto;
   display: block;
-  background: #fff;
-  border: 1px solid rgba(255, 42, 1, 0.12);
-  border-radius: 8px;
-  padding: clamp(18px, 4vw, 42px);
-  filter: drop-shadow(0 18px 32px rgba(96, 48, 31, 0.12));
 }
 
 .research-strip {
@@ -351,6 +346,13 @@ h1 {
   font-weight: 700;
 }
 
+.subtle-note {
+  background: #f8fbf7;
+  border-color: #d8e8df;
+  color: #33443f;
+  font-weight: 600;
+}
+
 .results-header {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -410,6 +412,15 @@ h1 {
 
 .scheme-card h3 a:hover {
   color: var(--orange);
+}
+
+.inline-action {
+  display: inline-flex;
+  margin-left: 8px;
+  color: var(--teal);
+  font-weight: 800;
+  text-decoration-color: rgba(77, 127, 112, 0.35);
+  text-underline-offset: 3px;
 }
 
 .scheme-card p {
@@ -600,9 +611,16 @@ h1 {
   }
 
   .language-grid,
-  .choice-grid,
   .card-grid,
   .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .language-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .choice-grid {
     grid-template-columns: 1fr;
   }
 

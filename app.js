@@ -34,6 +34,14 @@
     healthier_sg: "https://www.healthiersg.gov.sg/",
     sg60_vouchers: "https://www.govbenefits.gov.sg/"
   };
+  const nextStepLinks = {
+    sgo_aac: { href: "tel:18006506060", labelKey: "contact.callSgo" },
+    gstv_medisave: { href: "https://www.govbenefits.gov.sg/", labelKey: "ui.openGovBenefits" },
+    pioneer: { href: "https://www.govbenefits.gov.sg/", labelKey: "ui.openGovBenefits" },
+    merdeka: { href: "https://www.govbenefits.gov.sg/", labelKey: "ui.openGovBenefits" },
+    majulah_earn_save: { href: "https://www.govbenefits.gov.sg/", labelKey: "ui.openGovBenefits" },
+    sg60_vouchers: { href: "https://www.govbenefits.gov.sg/", labelKey: "ui.openGovBenefits" }
+  };
 
   const state = {
     lang: null,
@@ -141,10 +149,12 @@
       return;
     }
 
-    const selected = state.answers[question.id] || (question.multi ? [] : null);
+    let selected = state.answers[question.id] || (question.multi ? [] : null);
     const progress = Math.round(((state.step + 1) / visible.length) * 100);
     const warn = question.id === "residency" && state.answers.residency === "foreigner"
       ? `<div class="message-box">${t("messages.foreigner")}</div>` : "";
+    const extraNote = question.id === "healthNeeds"
+      ? `<div class="message-box subtle-note">${t("notes.dailyActivities")}</div>` : "";
 
     app.innerHTML = `
       <section class="question-stage">
@@ -156,6 +166,7 @@
         <h1 class="question-title">${t(`questions.${question.id}.title`)}</h1>
         <p class="hint">${question.multi ? t("ui.multiHint") : t(`questions.${question.id}.hint`)}</p>
         ${warn}
+        ${extraNote}
         <div class="choice-grid">
           ${question.choices.map((choice) => {
             const isSelected = question.multi ? selected.includes(choice) : selected === choice;
@@ -192,7 +203,16 @@
           else values = values.filter((item) => item !== "none");
           values = values.includes(value) ? values.filter((item) => item !== value) : [...values, value];
           state.answers[question.id] = values;
-          renderQuestion();
+          selected = values;
+          app.querySelectorAll("[data-choice]").forEach((choiceButton) => {
+            const choiceValue = choiceButton.dataset.choice;
+            const isSelected = values.includes(choiceValue);
+            choiceButton.classList.toggle("selected", isSelected);
+            choiceButton.setAttribute("aria-pressed", String(isSelected));
+            const icon = choiceButton.querySelector(".choice-icon");
+            if (icon) icon.textContent = isSelected ? "✓" : "○";
+          });
+          app.querySelector("[data-action='next']")?.toggleAttribute("disabled", values.length === 0);
           return;
         }
 
@@ -356,6 +376,7 @@
   function renderCard(item, status) {
     const scheme = t(`schemes.${item.id}`);
     const url = schemeLinks[item.id];
+    const nextLink = nextStepLinks[item.id];
     return `
       <article class="scheme-card ${status === "maybe" ? "maybe" : status === "no" ? "no" : ""}">
         <div class="tags">
@@ -365,7 +386,7 @@
         <h3><a href="${url}" target="_blank" rel="noreferrer">${scheme.title}</a></h3>
         <p>${scheme.summary}</p>
         <p><strong>${t("ui.why")}:</strong> ${item.reasonKeys.map((key) => t(`reasons.${key}`)).join(" ")}</p>
-        <p><strong>${t("ui.nextStep")}:</strong> ${scheme.next}</p>
+        <p><strong>${t("ui.nextStep")}:</strong> ${scheme.next} ${nextLink ? `<a class="inline-action" href="${nextLink.href}" ${nextLink.href.startsWith("http") ? 'target="_blank" rel="noreferrer"' : ""}>${t(nextLink.labelKey)}</a>` : ""}</p>
       </article>
     `;
   }
