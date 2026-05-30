@@ -16,6 +16,24 @@
     ["AIC - ElderFund", "https://www.aic.sg/Financial-Assistance/ElderFund"],
     ["MOH - CareShield Life and MediSave Care", "https://www.moh.gov.sg/healthcare-schemes-subsidies/careshield-life"]
   ];
+  const schemeLinks = {
+    sgo_aac: "https://www.aic.sg/Age-Well/Silver-Generation-Office/About-SGO",
+    senior_concession: "https://www.transitlink.com.sg/concession-cards/",
+    chas: "https://www.chas.sg/",
+    gstv_medisave: "https://www.govbenefits.gov.sg/",
+    silver_support: "https://www.cpf.gov.sg/member/retirement-income/government-support/silver-support-scheme",
+    pioneer: "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/pioneer-generation-package",
+    merdeka: "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/merdeka-generation-package",
+    majulah_earn_save: "https://www.govbenefits.gov.sg/",
+    workfare: "https://www.cpf.gov.sg/service/article/what-is-the-workfare-income-supplement-scheme",
+    comcare: "https://supportgowhere.life.gov.sg/",
+    home_caregiving: "https://www.aic.sg/Financial-Assistance/Home-Caregiving-Grant",
+    smf: "https://www.aic.sg/financial-assistance/seniors-mobility-and-enabling-fund-assistive-devices/",
+    medisave_care: "https://www.moh.gov.sg/healthcare-schemes-subsidies/careshield-life",
+    elderfund: "https://www.aic.sg/Financial-Assistance/ElderFund",
+    healthier_sg: "https://www.healthiersg.gov.sg/",
+    sg60_vouchers: "https://www.govbenefits.gov.sg/"
+  };
 
   const state = {
     lang: null,
@@ -61,34 +79,40 @@
   }
 
   function renderLanding() {
-    document.documentElement.lang = "en";
+    const lang = state.lang || "en";
+    document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
     state.step = 0;
     state.answers = {};
     app.innerHTML = `
       <section class="hero">
         <div class="hero-copy">
           <p class="kicker">AskSGO</p>
-          <h1>Senior schemes finder</h1>
-          <p class="lead">Question-by-question helper for older residents in Singapore. Pick language, answer large multiple-choice prompts, then see likely schemes and next steps.</p>
+          <h1>${t("landing.title")}</h1>
+          <p class="lead">${t("landing.lead")}</p>
           <div class="assurance-row">
-            <span>Official SGO asset only</span>
-            <span>No personal data stored</span>
-            <span>Sources checked ${VERIFIED_DATE}</span>
+            <span>${t("landing.asset")}</span>
+            <span>${t("landing.privacy")}</span>
+            <span>${t("landing.checked")} ${VERIFIED_DATE}</span>
           </div>
           <div class="language-grid">
             ${Object.entries(i18n).map(([key, copy]) => `
-              <button class="lang-button" type="button" data-lang="${key}"><span class="flag-icon flag-${key}" aria-hidden="true"></span>${copy.meta.name}</button>
+              <button class="lang-button ${key === lang ? "selected" : ""}" type="button" data-lang="${key}" aria-pressed="${key === lang}">
+                <span class="flag-icon flag-${key}" aria-hidden="true"></span>${copy.meta.name}
+              </button>
             `).join("")}
           </div>
-          <button class="link-button supervisor-link" type="button" data-action="supervisor">Supervisor review guide</button>
+          <div class="start-row">
+            <button class="action-button primary start-button" type="button" data-action="start">${t("ui.start")}</button>
+            <button class="link-button supervisor-link" type="button" data-action="supervisor">${t("ui.supervisor")}</button>
+          </div>
         </div>
         <div class="hero-brand-wrap" aria-label="Silver Generation Office visual panel">
           <div class="sgo-logo-mark">
             <img src="assets/sgo-logo.svg" alt="Silver Generation Office logo" />
           </div>
           <div class="research-strip">
-            <h2>Research basis</h2>
-            <p>SGO supports seniors through trusted outreach, care connection, active ageing, and navigation of national schemes. Eligibility checks here use official public criteria, then flag cases needing agency confirmation.</p>
+            <h2>${t("landing.researchTitle")}</h2>
+            <p>${t("landing.research")}</p>
           </div>
         </div>
       </section>
@@ -97,10 +121,14 @@
     app.querySelectorAll("[data-lang]").forEach((button) => {
       button.addEventListener("click", () => {
         state.lang = button.dataset.lang;
-        document.documentElement.lang = state.lang === "zh" ? "zh-Hans" : state.lang;
-        state.step = 0;
-        renderQuestion();
+        renderLanding();
       });
+    });
+    app.querySelector("[data-action='start']").addEventListener("click", () => {
+      state.lang = state.lang || "en";
+      document.documentElement.lang = state.lang === "zh" ? "zh-Hans" : state.lang;
+      state.step = 0;
+      renderQuestion();
     });
     app.querySelector("[data-action='supervisor']").addEventListener("click", renderSupervisor);
   }
@@ -328,13 +356,14 @@
 
   function renderCard(item, status) {
     const scheme = t(`schemes.${item.id}`);
+    const url = schemeLinks[item.id];
     return `
       <article class="scheme-card ${status === "maybe" ? "maybe" : status === "no" ? "no" : ""}">
         <div class="tags">
           <span class="tag">${t(`status.${status}`)}</span>
           ${(scheme.tags || []).map((tag) => `<span class="tag">${tag}</span>`).join("")}
         </div>
-        <h3>${scheme.title}</h3>
+        <h3><a href="${url}" target="_blank" rel="noreferrer">${scheme.title}</a></h3>
         <p>${scheme.summary}</p>
         <p><strong>${t("ui.why")}:</strong> ${item.reasonKeys.map((key) => t(`reasons.${key}`)).join(" ")}</p>
         <p><strong>${t("ui.nextStep")}:</strong> ${scheme.next}</p>
@@ -356,6 +385,13 @@
             <button class="action-button primary" type="button" data-action="restart">${t("ui.restart")}</button>
           </div>
         </div>
+        <section class="contact-panel">
+          <div>
+            <h2>${t("contact.title")}</h2>
+            <p>${t("contact.body")}</p>
+          </div>
+          <a class="action-button primary" href="tel:18006506060">${t("contact.call")} 1800-650-6060</a>
+        </section>
         ${["likely", "maybe", "no"].map((status) => `
           <section class="result-section">
             <h2>${t(`results.${status}`)} (${groups[status].length})</h2>

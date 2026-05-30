@@ -63,7 +63,7 @@ for (const lang of langs.slice(1)) {
 const sourceUrls = [...app.matchAll(/https:\/\/[^"',\])]+/g)].map((match) => match[0]);
 if (sourceUrls.length < 8) fail("expected official source links in app.js");
 for (const url of sourceUrls) {
-  const official = url.includes(".gov.sg") || url.includes("aic.sg") || url.includes("cpf.gov.sg") || url.includes("supportgowhere.life.gov.sg");
+  const official = url.includes(".gov.sg") || url.includes("aic.sg") || url.includes("cpf.gov.sg") || url.includes("supportgowhere.life.gov.sg") || url.includes("transitlink.com.sg") || url.includes("healthiersg.gov.sg") || url.includes("chas.sg");
   if (!official) fail(`non-official source URL found: ${url}`);
 }
 

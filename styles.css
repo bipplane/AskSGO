@@ -1,15 +1,15 @@
 :root {
   --ink: #1f2933;
   --muted: #5d6673;
-  --paper: #fffaf1;
+  --paper: #fff7f2;
   --surface: #ffffff;
-  --orange: #df7d27;
-  --gold: #f2bd4b;
-  --teal: #087f7a;
-  --teal-soft: #dff4ef;
+  --orange: #d9573f;
+  --gold: #f1b868;
+  --teal: #4d7f70;
+  --teal-soft: #e5f1eb;
   --red: #b54708;
-  --line: #eadfcf;
-  --shadow: 0 18px 46px rgba(76, 57, 24, 0.16);
+  --line: #ead7cf;
+  --shadow: 0 18px 46px rgba(96, 48, 31, 0.14);
 }
 
 * {
@@ -21,8 +21,8 @@ body {
   min-height: 100vh;
   color: var(--ink);
   background:
-    radial-gradient(circle at 10% 0%, rgba(242, 189, 75, 0.28), transparent 34%),
-    linear-gradient(135deg, #fff7e6 0%, #ecfbf6 54%, #fffaf1 100%);
+    radial-gradient(circle at 10% 0%, rgba(255, 42, 1, 0.1), transparent 34%),
+    linear-gradient(135deg, #fff5ef 0%, #f3eee2 48%, #eaf4ef 100%);
   font-family: "Noto Sans", "Noto Sans SC", "Noto Sans Tamil", system-ui, sans-serif;
   letter-spacing: 0;
 }
@@ -237,13 +237,14 @@ h1 {
 }
 
 .choice-button.selected,
+.lang-button.selected,
 .choice-button:hover,
 .lang-button:hover,
 .action-button:hover,
 .link-button:hover {
-  border-color: var(--teal);
+  border-color: var(--orange);
   transform: translateY(-1px);
-  background: #f8fffc;
+  background: #fff8f4;
 }
 
 .choice-button.selected .choice-icon {
@@ -258,18 +259,12 @@ h1 {
   position: relative;
   box-shadow: var(--shadow);
   background:
-    linear-gradient(140deg, rgba(255, 250, 241, 0.88), rgba(223, 244, 239, 0.9)),
-    radial-gradient(circle at 24% 20%, rgba(242, 189, 75, 0.5), transparent 28%),
-    radial-gradient(circle at 82% 62%, rgba(8, 127, 122, 0.24), transparent 34%);
+    linear-gradient(145deg, #fff8f4 0%, #f8e8df 55%, #e9f2ed 100%);
 }
 
 .hero-brand-wrap::before,
 .hero-brand-wrap::after {
-  content: "";
-  position: absolute;
-  background: url("assets/sgo-logo.svg") center / contain no-repeat;
-  opacity: 0.13;
-  pointer-events: none;
+  display: none;
 }
 
 .hero-brand-wrap::before {
@@ -297,10 +292,14 @@ h1 {
 }
 
 .sgo-logo-mark img {
-  width: min(82%, 520px);
+  width: min(72%, 480px);
   height: auto;
   display: block;
-  filter: drop-shadow(0 18px 32px rgba(60, 43, 16, 0.14));
+  background: #fff;
+  border: 1px solid rgba(255, 42, 1, 0.12);
+  border-radius: 8px;
+  padding: clamp(18px, 4vw, 42px);
+  filter: drop-shadow(0 18px 32px rgba(96, 48, 31, 0.12));
 }
 
 .research-strip {
@@ -403,7 +402,7 @@ h1 {
 }
 
 .primary {
-  background: var(--teal);
+  background: var(--orange);
   color: #fff;
 }
 
@@ -474,6 +473,16 @@ h1 {
   font-size: 1.22rem;
 }
 
+.scheme-card h3 a {
+  color: var(--ink);
+  text-decoration-color: rgba(217, 87, 63, 0.4);
+  text-underline-offset: 4px;
+}
+
+.scheme-card h3 a:hover {
+  color: var(--orange);
+}
+
 .scheme-card p {
   margin: 0;
   color: var(--muted);
@@ -513,6 +522,42 @@ h1 {
   font-weight: 800;
 }
 
+.start-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.start-button {
+  min-width: 180px;
+}
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: center;
+  margin: 18px 0 4px;
+  padding: 18px;
+  background: #fff8f4;
+  border: 1px solid rgba(217, 87, 63, 0.22);
+  border-left: 7px solid var(--orange);
+  border-radius: 8px;
+}
+
+.contact-panel h2 {
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+}
+
+.contact-panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 .supervisor-link {
   margin-top: 16px;
   width: fit-content;
@@ -548,7 +593,8 @@ h1 {
   }
 
   .hero,
-  .results-header {
+  .results-header,
+  .contact-panel {
     grid-template-columns: 1fr;
   }
 

@@ -10,7 +10,23 @@
       "multiHint": "Choose all that apply.",
       "why": "Why this appears",
       "nextStep": "Next step",
-      "supportGoWhere": "Visit SupportGoWhere"
+      "supportGoWhere": "Visit SupportGoWhere",
+      "start": "Start",
+      "supervisor": "Supervisor review guide"
+    },
+    "landing": {
+      "title": "Senior schemes finder",
+      "lead": "Pick a language, then answer one simple question at a time to see schemes that may fit your needs.",
+      "asset": "Official SGO asset only",
+      "privacy": "No personal data stored",
+      "checked": "Sources checked",
+      "researchTitle": "Research basis",
+      "research": "SGO supports seniors by understanding their needs and connecting them with relevant care services and resources through home visits, calls, and community programmes."
+    },
+    "contact": {
+      "title": "Need help after this?",
+      "body": "Call AIC for care services and scheme advice in English, Chinese, Malay, or Tamil. Calls from AIC Hotline and SGO may show as 6650 6060 on caller ID.",
+      "call": "Call"
     },
     "messages": {
       "below60Title": "This tool is for seniors aged 60+.",
@@ -163,7 +179,21 @@
   },
   "zh": {
     "meta": { "name": "中文", "flag": "🇨🇳" },
-    "ui": { "step": "步骤", "restart": "重新开始", "back": "返回", "next": "下一步", "results": "结果", "multiHint": "请选择所有适用项目。", "why": "出现原因", "nextStep": "下一步", "supportGoWhere": "前往 SupportGoWhere" },
+    "ui": { "step": "步骤", "restart": "重新开始", "back": "返回", "next": "下一步", "results": "结果", "multiHint": "请选择所有适用项目。", "why": "出现原因", "nextStep": "下一步", "supportGoWhere": "前往 SupportGoWhere", "start": "开始", "supervisor": "导师评审指南" },
+    "landing": {
+      "title": "乐龄援助计划查询",
+      "lead": "请选择语言，然后逐题回答简单问题，查看可能适合您的计划。",
+      "asset": "只使用SGO官方素材",
+      "privacy": "不储存个人资料",
+      "checked": "资料检查日期",
+      "researchTitle": "资料依据",
+      "research": "SGO通过家访、电话和社区活动了解年长者的需要，并把他们连接到相关护理服务和资源。"
+    },
+    "contact": {
+      "title": "之后还需要帮助？",
+      "body": "可致电AIC，用英语、华语、马来语或淡米尔语查询护理服务和计划。AIC热线和SGO来电可能会显示为6650 6060。",
+      "call": "拨电"
+    },
     "messages": { "below60Title": "本工具适用于60岁及以上年长者。", "below60": "请到 SupportGoWhere 查询其他援助计划。如你是在帮60岁或以上人士填写，可重新开始。", "foreigner": "多数计划适用于新加坡公民和永久居民。你仍可能符合少数社区服务。可继续查看结果。" },
     "questions": {
       "age": { "title": "您的年龄是？", "hint": "请选择一个年龄范围。" },
@@ -224,7 +254,21 @@
   },
   "ms": {
     "meta": { "name": "Bahasa Melayu", "flag": "🇲🇾" },
-    "ui": { "step": "Langkah", "restart": "Mula semula", "back": "Kembali", "next": "Seterusnya", "results": "Keputusan", "multiHint": "Pilih semua yang berkaitan.", "why": "Sebab dipaparkan", "nextStep": "Langkah seterusnya", "supportGoWhere": "Lawati SupportGoWhere" },
+    "ui": { "step": "Langkah", "restart": "Mula semula", "back": "Kembali", "next": "Seterusnya", "results": "Keputusan", "multiHint": "Pilih semua yang berkaitan.", "why": "Sebab dipaparkan", "nextStep": "Langkah seterusnya", "supportGoWhere": "Lawati SupportGoWhere", "start": "Mula", "supervisor": "Panduan penilaian penyelia" },
+    "landing": {
+      "title": "Pencari skim warga emas",
+      "lead": "Pilih bahasa, kemudian jawab satu soalan mudah pada satu masa untuk melihat skim yang mungkin sesuai.",
+      "asset": "Aset rasmi SGO sahaja",
+      "privacy": "Data peribadi tidak disimpan",
+      "checked": "Sumber disemak",
+      "researchTitle": "Asas kajian",
+      "research": "SGO menyokong warga emas dengan memahami keperluan mereka dan menghubungkan mereka kepada khidmat jagaan serta sumber yang sesuai melalui lawatan rumah, panggilan dan program masyarakat."
+    },
+    "contact": {
+      "title": "Perlu bantuan selepas ini?",
+      "body": "Hubungi AIC untuk nasihat khidmat jagaan dan skim dalam bahasa Inggeris, Cina, Melayu, atau Tamil. Panggilan AIC Hotline dan SGO mungkin tertera sebagai 6650 6060.",
+      "call": "Hubungi"
+    },
     "messages": { "below60Title": "Alat ini untuk warga emas berumur 60 tahun ke atas.", "below60": "Lawati SupportGoWhere untuk skim bantuan lain. Mula semula jika anda membantu seseorang berumur 60 tahun atau lebih.", "foreigner": "Kebanyakan skim untuk Warganegara Singapura dan Penduduk Tetap. Anda mungkin masih layak untuk beberapa khidmat masyarakat. Teruskan untuk lihat keputusan." },
     "questions": {
       "age": { "title": "Apakah umur anda?", "hint": "Pilih satu julat umur." },
@@ -285,7 +329,21 @@
   },
   "ta": {
     "meta": { "name": "தமிழ்", "flag": "🇮🇳" },
-    "ui": { "step": "படி", "restart": "மீண்டும் தொடங்கு", "back": "பின்", "next": "அடுத்து", "results": "முடிவுகள்", "multiHint": "பொருந்தும் அனைத்தையும் தேர்ந்தெடுக்கவும்.", "why": "காரணம்", "nextStep": "அடுத்த படி", "supportGoWhere": "SupportGoWhere செல்லவும்" },
+    "ui": { "step": "படி", "restart": "மீண்டும் தொடங்கு", "back": "பின்", "next": "அடுத்து", "results": "முடிவுகள்", "multiHint": "பொருந்தும் அனைத்தையும் தேர்ந்தெடுக்கவும்.", "why": "காரணம்", "nextStep": "அடுத்த படி", "supportGoWhere": "SupportGoWhere செல்லவும்", "start": "தொடங்கு", "supervisor": "மேற்பார்வையாளர் மதிப்பீட்டு வழிகாட்டி" },
+    "landing": {
+      "title": "மூத்தோர் திட்டங்கள் தேடல்",
+      "lead": "மொழியைத் தேர்ந்தெடுத்து, எளிய கேள்விகளுக்கு ஒன்றன்பின் ஒன்றாக பதிலளித்து, உங்களுக்கு பொருந்தக்கூடிய திட்டங்களைப் பாருங்கள்.",
+      "asset": "SGO அதிகாரப்பூர்வ வளம் மட்டும்",
+      "privacy": "தனிப்பட்ட தரவு சேமிக்கப்படாது",
+      "checked": "ஆதாரங்கள் சரிபார்க்கப்பட்டது",
+      "researchTitle": "ஆராய்ச்சி அடிப்படை",
+      "research": "SGO வீட்டு வருகைகள், அழைப்புகள் மற்றும் சமூக நிகழ்ச்சிகள் மூலம் மூத்தோரின் தேவைகளைப் புரிந்து, பொருத்தமான பராமரிப்பு சேவைகள் மற்றும் வளங்களுடன் இணைக்கிறது."
+    },
+    "contact": {
+      "title": "இதற்குப் பிறகு உதவி வேண்டுமா?",
+      "body": "ஆங்கிலம், சீனம், மலாய் அல்லது தமிழ் மொழிகளில் பராமரிப்பு சேவைகள் மற்றும் திட்ட ஆலோசனைக்கு AIC ஐ அழைக்கவும். AIC Hotline மற்றும் SGO அழைப்புகள் caller ID-யில் 6650 6060 என தோன்றலாம்.",
+      "call": "அழைக்கவும்"
+    },
     "messages": { "below60Title": "இந்த கருவி 60 வயது மற்றும் அதற்கு மேற்பட்ட மூத்தோருக்கானது.", "below60": "மற்ற திட்டங்களுக்கு SupportGoWhere பார்க்கவும். 60 வயது அல்லது அதற்கு மேற்பட்ட ஒருவருக்கு உதவினால் மீண்டும் தொடங்கலாம்.", "foreigner": "பெரும்பாலான திட்டங்கள் சிங்கப்பூர் குடிமக்கள் மற்றும் நிரந்தர குடியிருப்பாளர்களுக்கானவை. சில சமூக சேவைகள் இன்னும் பொருந்தலாம். முடிவுகளைப் பார்க்க தொடரவும்." },
     "questions": {
       "age": { "title": "உங்கள் வயது என்ன?", "hint": "ஒரு வயது வரம்பைத் தேர்வுசெய்க." },
