@@ -30,6 +30,17 @@ for (const token of banned) {
   if (app.includes(token) || css.includes(token)) fail(`banned generated-image reference: ${token}`);
 }
 
+const cssBlocks = css.matchAll(/([^{}]+)\{([^{}]*)\}/g);
+for (const [, selector, declarations] of cssBlocks) {
+  const isSelectableFeedback = [":hover", ":active", ":focus"].some((state) =>
+    selector.includes(`.choice-button${state}`) || selector.includes(`.lang-button${state}`));
+  const isSelectedStyle = selector.includes(".choice-button.selected") || selector.includes(".lang-button.selected");
+  if (isSelectableFeedback && isSelectedStyle) fail("selectable feedback and selected styles must stay separate");
+  if (isSelectableFeedback && /(?:^|;)\s*(?:border-color|background)\s*:/.test(declarations)) {
+    fail("selectable feedback must not look selected");
+  }
+}
+
 const assets = readdirSync(new URL("assets", root));
 for (const asset of assets) {
   const allowed = asset === "sgo-logo.svg";
