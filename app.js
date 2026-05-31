@@ -86,6 +86,20 @@
     return questions.filter((question) => !question.showIf || question.showIf());
   }
 
+  function setSelectableState(button, isSelected) {
+    button.classList.toggle("selected", isSelected);
+    button.setAttribute("aria-pressed", String(isSelected));
+    const icon = button.querySelector(".choice-icon");
+    if (icon) icon.textContent = isSelected ? "✓" : "○";
+  }
+
+  function syncSelectableButtons(selector, selectedValues) {
+    const values = new Set(Array.isArray(selectedValues) ? selectedValues : [selectedValues].filter(Boolean));
+    app.querySelectorAll(selector).forEach((button) => {
+      setSelectableState(button, values.has(button.dataset.lang || button.dataset.choice));
+    });
+  }
+
   function renderLanding() {
     const lang = state.lang || "en";
     document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
@@ -125,9 +139,13 @@
       </section>
     `;
 
+    syncSelectableButtons("[data-lang]", lang);
+
     app.querySelectorAll("[data-lang]").forEach((button) => {
       button.addEventListener("click", () => {
         state.lang = button.dataset.lang;
+        syncSelectableButtons("[data-lang]", state.lang);
+        button.blur();
         renderLanding();
       });
     });
@@ -185,6 +203,8 @@
       </section>
     `;
 
+    syncSelectableButtons("[data-choice]", selected);
+
     app.querySelector("[data-action='restart']").addEventListener("click", renderLanding);
     app.querySelector("[data-action='back']")?.addEventListener("click", () => {
       state.step -= 1;
@@ -199,24 +219,23 @@
         const value = button.dataset.choice;
         if (question.multi) {
           let values = [...(state.answers[question.id] || [])];
-          if (value === "none") values = ["none"];
-          else values = values.filter((item) => item !== "none");
-          values = values.includes(value) ? values.filter((item) => item !== value) : [...values, value];
+          if (value === "none") {
+            values = values.includes("none") ? [] : ["none"];
+          } else {
+            values = values.filter((item) => item !== "none");
+            values = values.includes(value) ? values.filter((item) => item !== value) : [...values, value];
+          }
           state.answers[question.id] = values;
           selected = values;
-          app.querySelectorAll("[data-choice]").forEach((choiceButton) => {
-            const choiceValue = choiceButton.dataset.choice;
-            const isSelected = values.includes(choiceValue);
-            choiceButton.classList.toggle("selected", isSelected);
-            choiceButton.setAttribute("aria-pressed", String(isSelected));
-            const icon = choiceButton.querySelector(".choice-icon");
-            if (icon) icon.textContent = isSelected ? "✓" : "○";
-          });
+          syncSelectableButtons("[data-choice]", values);
           app.querySelector("[data-action='next']")?.toggleAttribute("disabled", values.length === 0);
+          button.blur();
           return;
         }
 
         state.answers[question.id] = value;
+        syncSelectableButtons("[data-choice]", value);
+        button.blur();
         if (question.id === "age" && value === "below_60") {
           renderExit();
           return;
@@ -432,7 +451,7 @@
 
   function renderSupervisor() {
     app.innerHTML = `
-      <section class="results-stage">
+      <section class="results-stage supervisor-stage">
         <div class="results-header">
           <div>
             <span class="pill">Supervisor</span>
@@ -441,28 +460,28 @@
           </div>
           <button class="action-button primary" type="button" data-action="restart">Back to app</button>
         </div>
-        <div class="review-grid">
-          <article class="review-card">
+        <div class="review-grid compact">
+          <article class="review-card compact">
             <h2>SGO fit</h2>
             <p>Built around SGO's public role: senior outreach, needs discovery, and connection to relevant care services/resources through visits, calls, and community programmes.</p>
           </article>
-          <article class="review-card">
+          <article class="review-card compact">
             <h2>Accuracy guardrails</h2>
             <p>Results are grouped as likely, needs checking, and less likely. Schemes needing CPF, IRAS, Singpass, medical, or household verification are not overclaimed.</p>
           </article>
-          <article class="review-card">
+          <article class="review-card compact">
             <h2>Senior UX</h2>
             <p>Large buttons, one question per screen, clear progress, restart/back controls, plain-language explanations, and multilingual content from one i18n dictionary.</p>
           </article>
-          <article class="review-card">
+          <article class="review-card compact">
             <h2>Privacy</h2>
             <p>No login, cookies, analytics, server calls, or stored form data. Answers stay in browser memory and clear on restart or refresh.</p>
           </article>
-          <article class="review-card">
+          <article class="review-card compact">
             <h2>Netlify</h2>
             <p>Static app. Publish directory is project root. Build command validates JavaScript, JSON, source links, i18n keys, and required SGO logo file.</p>
           </article>
-          <article class="review-card">
+          <article class="review-card compact">
             <h2>Asset rule</h2>
             <p>UI uses the SGO logo from AIC CDN. No synthetic or generated bitmap images remain in project files.</p>
           </article>
