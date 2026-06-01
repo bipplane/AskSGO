@@ -1,7 +1,7 @@
 (async () => {
   const DATA_URL = "data/i18n.json";
   const app = document.querySelector("#app");
-  const VERIFIED_DATE = "30 May 2026";
+  const VERIFIED_DATE = "1 Jun 2026";
 
   const i18n = await fetch(DATA_URL).then((response) => response.json());
   const sourceLinks = [
@@ -11,8 +11,18 @@
     ["MOH - Pioneer Generation Package", "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/pioneer-generation-package"],
     ["MOH - Merdeka Generation Package", "https://www.moh.gov.sg/managing-expenses/schemes-and-subsidies/merdeka-generation-package"],
     ["CPF Board - Workfare Income Supplement", "https://www.cpf.gov.sg/service/article/what-is-the-workfare-income-supplement-scheme"],
+    ["AIC - Financial Assistance", "https://www.aic.sg/Financial-Assistance"],
+    ["AIC - Care Services", "https://www.aic.sg/Care-Services"],
+    ["AIC - Caregiving Support", "https://www.aic.sg/Caregiving-Support"],
     ["AIC - Home Caregiving Grant", "https://www.aic.sg/Financial-Assistance/Home-Caregiving-Grant"],
     ["AIC - Seniors' Mobility and Enabling Fund", "https://www.aic.sg/financial-assistance/seniors-mobility-and-enabling-fund-assistive-devices/"],
+    ["AIC - SMF Home Healthcare Items", "https://www.aic.sg/Financial-Assistance/Seniors-Mobility-and-Enabling-Fund---Home-Healthcare-Items"],
+    ["AIC - Caregivers Training Grant", "https://www.aic.sg/financial-assistance/caregivers-training-grant-ctg/"],
+    ["AIC - MDW Levy Concession", "https://www.aic.sg/financial-assistance/migrant-domestic-worker-levy-concession"],
+    ["AIC - PioneerDAS", "https://www.aic.sg/financial-assistance/pioneer-generation-disability-assistance-scheme"],
+    ["AIC - IDAPE", "https://www.aic.sg/Financial-Assistance/Interim-Disability-Assistance-Programme-for-the-Elderly"],
+    ["AIC - CareShield Life", "https://www.aic.sg/Financial-Assistance/CareShield-Life"],
+    ["AIC - ElderShield", "https://www.aic.sg/Financial-Assistance/ElderShield"],
     ["AIC - ElderFund", "https://www.aic.sg/Financial-Assistance/ElderFund"],
     ["MOH - CareShield Life and MediSave Care", "https://www.moh.gov.sg/healthcare-schemes-subsidies/careshield-life"]
   ];
@@ -29,8 +39,16 @@
     comcare: "https://supportgowhere.life.gov.sg/",
     home_caregiving: "https://www.aic.sg/Financial-Assistance/Home-Caregiving-Grant",
     smf: "https://www.aic.sg/financial-assistance/seniors-mobility-and-enabling-fund-assistive-devices/",
+    smf_home_items: "https://www.aic.sg/Financial-Assistance/Seniors-Mobility-and-Enabling-Fund---Home-Healthcare-Items",
+    caregiver_training: "https://www.aic.sg/financial-assistance/caregivers-training-grant-ctg/",
+    mdw_levy: "https://www.aic.sg/financial-assistance/migrant-domestic-worker-levy-concession",
+    pioneer_das: "https://www.aic.sg/financial-assistance/pioneer-generation-disability-assistance-scheme",
+    idape: "https://www.aic.sg/Financial-Assistance/Interim-Disability-Assistance-Programme-for-the-Elderly",
+    careshield_life: "https://www.aic.sg/Financial-Assistance/CareShield-Life",
+    eldershield: "https://www.aic.sg/Financial-Assistance/ElderShield",
     medisave_care: "https://www.moh.gov.sg/healthcare-schemes-subsidies/careshield-life",
     elderfund: "https://www.aic.sg/Financial-Assistance/ElderFund",
+    care_services: "https://www.aic.sg/Care-Services",
     healthier_sg: "https://www.healthiersg.gov.sg/",
     sg60_vouchers: "https://www.govbenefits.gov.sg/"
   };
@@ -73,6 +91,33 @@
       id: "healthNeeds",
       multi: true,
       choices: ["chronic", "mobility", "moderate_disability", "severe_disability", "home_care", "social_isolation", "none"]
+    },
+    {
+      id: "careServices",
+      multi: true,
+      exclusiveChoice: "no_care_services",
+      choices: ["home_nursing", "home_medical", "home_palliative", "day_hospice", "centre_care", "nursing_home_hospice", "mental_health", "acp", "no_care_services"],
+      showIf: () => (state.answers.healthNeeds || []).some((need) => need !== "none")
+    },
+    {
+      id: "caregiverTraining",
+      choices: ["family_caregiver_training", "mdw_caregiver_training", "no_training_needed", "not_sure"],
+      showIf: () => (state.answers.healthNeeds || []).some((need) => ["moderate_disability", "severe_disability", "home_care"].includes(need))
+    },
+    {
+      id: "mdwCare",
+      choices: ["have_mdw_same_home", "planning_mdw", "no_mdw", "not_sure"],
+      showIf: () => (state.answers.healthNeeds || []).some((need) => ["moderate_disability", "severe_disability", "home_care"].includes(need))
+    },
+    {
+      id: "ltcCoverage",
+      choices: ["careshield_life_policy", "eldershield_policy", "no_ltc_policy", "not_sure"],
+      showIf: () => (state.answers.healthNeeds || []).includes("severe_disability")
+    },
+    {
+      id: "medisaveBalance",
+      choices: ["medisave_5000_plus", "medisave_under_5000", "medisave_not_sure"],
+      showIf: () => (state.answers.healthNeeds || []).includes("severe_disability")
     },
     { id: "living", choices: ["with_family", "with_spouse", "alone", "care_facility"] },
     { id: "support", choices: ["adequate", "limited", "little_none"] }
@@ -219,10 +264,11 @@
         const value = button.dataset.choice;
         if (question.multi) {
           let values = [...(state.answers[question.id] || [])];
-          if (value === "none") {
-            values = values.includes("none") ? [] : ["none"];
+          const exclusiveChoice = question.exclusiveChoice || "none";
+          if (value === exclusiveChoice) {
+            values = values.includes(exclusiveChoice) ? [] : [exclusiveChoice];
           } else {
-            values = values.filter((item) => item !== "none");
+            values = values.filter((item) => item !== exclusiveChoice);
             values = values.includes(value) ? values.filter((item) => item !== value) : [...values, value];
           }
           state.answers[question.id] = values;
@@ -269,6 +315,10 @@
     return (state.answers.healthNeeds || []).includes(need);
   }
 
+  function hasCareService(service) {
+    return (state.answers.careServices || []).includes(service);
+  }
+
   function lowIncome() {
     return ["0_800", "801_1500"].includes(state.answers.income);
   }
@@ -279,6 +329,10 @@
 
   function hcgMeansPossible() {
     return ["0_800", "801_1500", "1501_2400", "2401_3500"].includes(state.answers.income) || avUpTo21();
+  }
+
+  function idapeMeansPossible() {
+    return hcgMeansPossible();
   }
 
   function avUpTo21() {
@@ -301,6 +355,18 @@
     return ["citizen", "pr"].includes(state.answers.residency);
   }
 
+  function hasHomeHealthcareService() {
+    return ["home_nursing", "home_medical", "home_palliative", "day_hospice"].some(hasCareService);
+  }
+
+  function wantsCaregiverTraining() {
+    return ["family_caregiver_training", "mdw_caregiver_training"].includes(state.answers.caregiverTraining);
+  }
+
+  function hasOrPlansMdw() {
+    return ["have_mdw_same_home", "planning_mdw"].includes(state.answers.mdwCare);
+  }
+
   function addScheme(groups, status, id, reasonKeys) {
     groups[status].push({ id, reasonKeys });
   }
@@ -312,6 +378,7 @@
     const hdb = ["hdb_1_2", "hdb_3", "hdb_4plus"].includes(state.answers.housing);
     const disabled = hasNeed("moderate_disability") || hasNeed("severe_disability") || hasNeed("home_care");
     const severe = hasNeed("severe_disability");
+    const careNeed = disabled || hasNeed("social_isolation") || (state.answers.careServices || []).some((service) => service !== "no_care_services") || state.answers.living === "care_facility";
     const weakSupport = ["limited", "little_none"].includes(state.answers.support);
     const notWorking = ["retired", "caregiver"].includes(state.answers.employment);
 
@@ -376,15 +443,59 @@
     if (resident() && hasNeed("mobility")) addScheme(groups, "likely", "smf", ["mobility", "resident"]);
     else addScheme(groups, "no", "smf", ["mobility"]);
 
-    if (resident() && severe) addScheme(groups, "likely", "medisave_care", ["severeDisability", "resident"]);
+    if (resident() && hasHomeHealthcareService() && idapeMeansPossible()) addScheme(groups, "likely", "smf_home_items", ["homeCare", "meansTest", "providerApply"]);
+    else if (resident() && (hasNeed("home_care") || hasHomeHealthcareService())) addScheme(groups, "maybe", "smf_home_items", ["homeCare", "providerApply"]);
+    else addScheme(groups, "no", "smf_home_items", ["homeCare"]);
+
+    if (resident() && (age >= 65 || disabled) && wantsCaregiverTraining()) addScheme(groups, "likely", "caregiver_training", ["age65OrDisability", "caregiverCourse"]);
+    else if (resident() && (age >= 65 || disabled) && state.answers.caregiverTraining === "not_sure") addScheme(groups, "maybe", "caregiver_training", ["age65OrDisability", "caregiverCourse"]);
+    else addScheme(groups, "no", "caregiver_training", ["age65OrDisability"]);
+
+    if (resident() && disabled && state.answers.mdwCare === "have_mdw_same_home" && state.answers.living !== "care_facility") addScheme(groups, "likely", "mdw_levy", ["disability", "mdwEmployerCheck"]);
+    else if (resident() && disabled && hasOrPlansMdw() && state.answers.living !== "care_facility") addScheme(groups, "maybe", "mdw_levy", ["disability", "mdwEmployerCheck"]);
+    else addScheme(groups, "no", "mdw_levy", ["disability"]);
+
+    if (citizen() && state.answers.birthCohort === "before_1949" && state.answers.citizenSince === "before_1986" && severe) {
+      addScheme(groups, "likely", "pioneer_das", ["birth1949", "citizenBy1986", "severeDisability"]);
+    } else if (citizen() && state.answers.birthCohort === "before_1949" && disabled) {
+      addScheme(groups, "maybe", "pioneer_das", ["birth1949", "needsAdlAssessment"]);
+    } else {
+      addScheme(groups, "no", "pioneer_das", ["birth1949", "disability"]);
+    }
+
+    if (citizen() && severe && age >= 65 && idapeMeansPossible() && state.answers.ltcCoverage === "no_ltc_policy") addScheme(groups, "likely", "idape", ["severeDisability", "idapeAgeCoverage", "meansTest"]);
+    else if (citizen() && severe && age >= 60 && state.answers.ltcCoverage !== "careshield_life_policy" && state.answers.ltcCoverage !== "eldershield_policy") addScheme(groups, "maybe", "idape", ["severeDisability", "idapeAgeCoverage"]);
+    else addScheme(groups, "no", "idape", ["severeDisability"]);
+
+    if (resident() && severe && state.answers.ltcCoverage === "careshield_life_policy") {
+      addScheme(groups, "likely", "careshield_life", ["severeDisability", "policyholderCheck"]);
+      addScheme(groups, "no", "eldershield", ["policyholderCheck"]);
+    } else if (resident() && severe && state.answers.ltcCoverage === "eldershield_policy") {
+      addScheme(groups, "no", "careshield_life", ["policyholderCheck"]);
+      addScheme(groups, "likely", "eldershield", ["severeDisability", "policyholderCheck"]);
+    } else if (resident() && severe && state.answers.ltcCoverage === "not_sure") {
+      addScheme(groups, "maybe", "careshield_life", ["severeDisability", "policyholderCheck"]);
+      addScheme(groups, "maybe", "eldershield", ["severeDisability", "policyholderCheck"]);
+    } else {
+      addScheme(groups, "no", "careshield_life", ["severeDisability"]);
+      addScheme(groups, "no", "eldershield", ["severeDisability"]);
+    }
+
+    if (resident() && severe && state.answers.medisaveBalance === "medisave_5000_plus") addScheme(groups, "likely", "medisave_care", ["severeDisability", "resident"]);
+    else if (resident() && severe && state.answers.medisaveBalance === "medisave_not_sure") addScheme(groups, "maybe", "medisave_care", ["severeDisability", "resident"]);
     else addScheme(groups, "no", "medisave_care", ["severeDisability"]);
 
-    if (citizen() && severe && lowIncome()) addScheme(groups, "maybe", "elderfund", ["severeDisability", "lowIncome"]);
+    if (citizen() && severe && lowIncome() && state.answers.medisaveBalance === "medisave_under_5000" && state.answers.ltcCoverage === "no_ltc_policy") addScheme(groups, "likely", "elderfund", ["severeDisability", "lowIncome", "policyholderCheck"]);
+    else if (citizen() && severe && lowIncome()) addScheme(groups, "maybe", "elderfund", ["severeDisability", "lowIncome"]);
     else addScheme(groups, "no", "elderfund", ["severeDisability"]);
 
     if (citizen() && hasNeed("chronic")) addScheme(groups, "likely", "healthier_sg", ["chronic", "citizen"]);
     else if (citizen()) addScheme(groups, "maybe", "healthier_sg", ["preventiveCare"]);
     else addScheme(groups, "no", "healthier_sg", ["citizenOnly"]);
+
+    if (resident() && careNeed) addScheme(groups, "likely", "care_services", ["careServices", "resident"]);
+    else if (resident()) addScheme(groups, "maybe", "care_services", ["careServices"]);
+    else addScheme(groups, "no", "care_services", ["resident"]);
 
     if (citizen()) addScheme(groups, "likely", "sg60_vouchers", ["citizen", "age60"]);
     else addScheme(groups, "no", "sg60_vouchers", ["citizenOnly"]);
