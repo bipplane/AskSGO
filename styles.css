@@ -424,6 +424,7 @@ h1 {
   border-radius: 8px;
   padding: 18px;
   display: grid;
+  align-content: start;
   gap: 10px;
   min-height: 210px;
 }
@@ -468,6 +469,7 @@ h1 {
 
 .tags {
   display: flex;
+  align-items: flex-start;
   gap: 8px;
   flex-wrap: wrap;
 }
