@@ -188,6 +188,10 @@
 
     app.querySelectorAll("[data-lang]").forEach((button) => {
       button.addEventListener("click", () => {
+        if (button.dataset.lang === (state.lang || "en")) {
+          button.blur();
+          return;
+        }
         state.lang = button.dataset.lang;
         syncSelectableButtons("[data-lang]", state.lang);
         button.blur();
