@@ -2,6 +2,11 @@
 
 AskSGO is a static, multilingual senior schemes finder for Singapore seniors, caregivers, volunteers, and SGO-style outreach conversations.
 
+<p align="center" height="40%">
+  <img width="419" height="595" alt="Screenshot_31" src="https://github.com/user-attachments/assets/861231d6-6c2e-4833-9977-c9b1379b2b38" />
+
+</p>
+
 It asks one plain-language question at a time, then groups relevant schemes into:
 
 - `Likely eligible`
@@ -19,7 +24,7 @@ AskSGO reduces that first-pass confusion by turning scheme discovery into a shor
 ## What It Does
 
 - Supports English, Chinese, Malay, and Tamil.
-- Uses large buttons and one question per screen for senior-friendly use.
+- Uses large font and buttons, and one question per screen, for senior-friendly use.
 - Covers age, residency, housing, income, employment, work income, property ownership, home Annual Value, birth cohort, citizenship timing, CPF-at-55 estimate, health and care needs, care services, caregiver training, migrant domestic worker care, long-term care insurance, MediSave balance, living arrangement, and family/caregiver support.
 - Shows why each scheme appears, using short reason text.
 - Links each scheme card to an official source.
@@ -29,7 +34,7 @@ AskSGO reduces that first-pass confusion by turning scheme discovery into a shor
 
 ## Covered Schemes And Supports
 
-AskSGO currently covers 24 schemes, benefits, and care supports:
+AskSGO currently covers **24 schemes, benefits, and care supports**:
 
 - [Silver Generation Office / Active Ageing Centre support](https://www.aic.sg/Age-Well/Silver-Generation-Office/About-SGO)
 - [Senior Citizen Concession Card](https://www.transitlink.com.sg/concession-cards/)
