@@ -60,6 +60,40 @@
     majulah_earn_save: { href: "https://www.govbenefits.gov.sg/", labelKey: "ui.openGovBenefits" },
     sg60_vouchers: { href: "https://www.govbenefits.gov.sg/", labelKey: "ui.openGovBenefits" }
   };
+  const needCategories = [
+    { id: "cash", schemeIds: ["silver_support", "comcare", "workfare", "majulah_earn_save", "gstv_medisave", "sg60_vouchers"] },
+    { id: "health", schemeIds: ["chas", "healthier_sg", "pioneer", "merdeka", "gstv_medisave"] },
+    { id: "care", schemeIds: ["care_services", "home_caregiving", "smf_home_items", "caregiver_training", "mdw_levy"] },
+    { id: "mobility", schemeIds: ["smf", "smf_home_items", "care_services"] },
+    { id: "disability", schemeIds: ["careshield_life", "eldershield", "medisave_care", "elderfund", "pioneer_das", "idape"] },
+    { id: "community", schemeIds: ["sgo_aac", "care_services", "senior_concession"] }
+  ];
+  const actionMeta = {
+    sgo_aac: { mode: "call", checks: ["needSummary", "homeArea"] },
+    senior_concession: { mode: "apply", checks: ["ageResidency", "identity"] },
+    chas: { mode: "apply", checks: ["incomeOrAv", "identity"] },
+    gstv_medisave: { mode: "automatic", checks: ["singpass", "banking"] },
+    silver_support: { mode: "automatic", checks: ["cpf", "household"] },
+    pioneer: { mode: "check", checks: ["singpass", "citizenshipDate"] },
+    merdeka: { mode: "check", checks: ["singpass", "citizenshipDate"] },
+    majulah_earn_save: { mode: "automatic", checks: ["workIncome", "banking"] },
+    workfare: { mode: "automatic", checks: ["workIncome", "medisaveContribution"] },
+    comcare: { mode: "apply", checks: ["incomeSupport", "household"] },
+    home_caregiving: { mode: "assessment", checks: ["adlAssessment", "incomeOrAv"] },
+    smf: { mode: "provider", checks: ["provider", "deviceNeed"] },
+    smf_home_items: { mode: "provider", checks: ["provider", "buyAfterApproval"] },
+    caregiver_training: { mode: "provider", checks: ["course", "careRecipient"] },
+    mdw_levy: { mode: "apply", checks: ["mdwEmployer", "sameAddress"] },
+    pioneer_das: { mode: "assessment", checks: ["pioneerStatus", "adlAssessment"] },
+    idape: { mode: "assessment", checks: ["adlAssessment", "ltcCoverage"] },
+    careshield_life: { mode: "claim", checks: ["policy", "adlAssessment"] },
+    eldershield: { mode: "claim", checks: ["policy", "adlAssessment"] },
+    medisave_care: { mode: "claim", checks: ["medisaveBalance", "adlAssessment"] },
+    elderfund: { mode: "assessment", checks: ["medisaveBalance", "ltcCoverage"] },
+    healthier_sg: { mode: "enrol", checks: ["clinic", "chronicNeeds"] },
+    care_services: { mode: "call", checks: ["needSummary", "homeArea"] },
+    sg60_vouchers: { mode: "check", checks: ["singpass", "claimDate"] }
+  };
 
   const state = {
     lang: null,
@@ -131,6 +165,11 @@
     return questions.filter((question) => !question.showIf || question.showIf());
   }
 
+  function resetFlow() {
+    state.step = 0;
+    state.answers = {};
+  }
+
   function setSelectableState(button, isSelected) {
     button.classList.toggle("selected", isSelected);
     button.setAttribute("aria-pressed", String(isSelected));
@@ -148,8 +187,7 @@
   function renderLanding() {
     const lang = state.lang || "en";
     document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
-    state.step = 0;
-    state.answers = {};
+    resetFlow();
     app.innerHTML = `
       <section class="hero">
         <div class="hero-copy">
@@ -170,6 +208,18 @@
           <div class="start-row">
             <button class="action-button primary start-button" type="button" data-action="start">${t("ui.start")}</button>
             <button class="link-button supervisor-link" type="button" data-action="supervisor">${t("ui.supervisor")}</button>
+          </div>
+          <div class="browse-panel">
+            <h2>${t("browse.title")}</h2>
+            <p>${t("browse.lead")}</p>
+            <div class="need-grid">
+              ${needCategories.map((need) => `
+                <button class="need-button" type="button" data-need="${need.id}">
+                  <span>${t(`browse.${need.id}`)}</span>
+                  <small>${need.schemeIds.length} ${t("browse.schemes")}</small>
+                </button>
+              `).join("")}
+            </div>
           </div>
         </div>
         <div class="hero-brand-wrap" aria-label="Silver Generation Office visual panel">
@@ -205,6 +255,49 @@
       renderQuestion();
     });
     app.querySelector("[data-action='supervisor']").addEventListener("click", renderSupervisor);
+    app.querySelectorAll("[data-need]").forEach((button) => {
+      button.addEventListener("click", () => renderBrowse(button.dataset.need));
+    });
+  }
+
+  function renderExploreCard(id) {
+    const scheme = t(`schemes.${id}`);
+    const url = schemeLinks[id];
+    return `
+      <article class="scheme-card explore-card">
+        <div class="tags">
+          ${(scheme.tags || []).map((tag) => `<span class="tag">${tag}</span>`).join("")}
+        </div>
+        <h3><a href="${url}" target="_blank" rel="noreferrer">${scheme.title}</a></h3>
+        <p>${scheme.summary}</p>
+        <p><strong>${t("ui.nextStep")}:</strong> ${scheme.next}</p>
+      </article>
+    `;
+  }
+
+  function renderBrowse(needId) {
+    const need = needCategories.find((item) => item.id === needId) || needCategories[0];
+    app.innerHTML = `
+      <section class="results-stage browse-stage">
+        <div class="results-header">
+          <div>
+            <span class="pill">${t("browse.kicker")}</span>
+            <h1>${t(`browse.${need.id}`)}</h1>
+            <p class="lead">${t("browse.note")}</p>
+          </div>
+          <div class="result-actions">
+            <button class="action-button primary" type="button" data-action="start">${t("browse.checkFit")}</button>
+            <button class="action-button secondary" type="button" data-action="restart">${t("ui.back")}</button>
+          </div>
+        </div>
+        <div class="card-grid">${need.schemeIds.map(renderExploreCard).join("")}</div>
+      </section>
+    `;
+    app.querySelector("[data-action='start']").addEventListener("click", () => {
+      resetFlow();
+      renderQuestion();
+    });
+    app.querySelector("[data-action='restart']").addEventListener("click", renderLanding);
   }
 
   function renderQuestion() {
@@ -507,10 +600,54 @@
     return groups;
   }
 
+  function renderActionPrep(id, status) {
+    const meta = actionMeta[id];
+    if (!meta || status === "no") return "";
+    return `
+      <div class="action-prep">
+        <h4>${t("actionPrep.title")}</h4>
+        <p><strong>${t("actionPrep.route")}:</strong> ${t(`actionModes.${meta.mode}`)}</p>
+        <ul>
+          ${meta.checks.map((check) => `<li>${t(`actionChecks.${check}`)}</li>`).join("")}
+        </ul>
+      </div>
+    `;
+  }
+
+  function answerText(question) {
+    const answer = state.answers[question.id];
+    if (!answer || (Array.isArray(answer) && answer.length === 0)) return "";
+    const values = Array.isArray(answer) ? answer : [answer];
+    return values.map((value) => t(`choices.${value}`)).join(", ");
+  }
+
+  function renderPrintSummary(groups) {
+    const answered = questions
+      .map((question) => ({ label: t(`questions.${question.id}.title`), value: answerText(question) }))
+      .filter((row) => row.value);
+    const schemeList = (items) => items.map((item) => `<li>${t(`schemes.${item.id}.title`)}</li>`).join("");
+
+    return `
+      <section class="print-summary" aria-hidden="true">
+        <h2>${t("print.title")}</h2>
+        <p>${t("sources.checked")} ${VERIFIED_DATE}. ${t("results.lead")}</p>
+        <h3>${t("print.answers")}</h3>
+        <dl>
+          ${answered.map((row) => `<div><dt>${row.label}</dt><dd>${row.value}</dd></div>`).join("")}
+        </dl>
+        <h3>${t("results.likely")}</h3>
+        <ol>${schemeList(groups.likely)}</ol>
+        <h3>${t("results.maybe")}</h3>
+        <ol>${schemeList(groups.maybe)}</ol>
+      </section>
+    `;
+  }
+
   function renderCard(item, status) {
     const scheme = t(`schemes.${item.id}`);
     const url = schemeLinks[item.id];
     const nextLink = nextStepLinks[item.id];
+    const actionPrep = renderActionPrep(item.id, status);
     return `
       <article class="scheme-card ${status === "maybe" ? "maybe" : status === "no" ? "no" : ""}">
         <div class="tags">
@@ -521,6 +658,7 @@
         <p>${scheme.summary}</p>
         <p><strong>${t("ui.why")}:</strong> ${item.reasonKeys.map((key) => t(`reasons.${key}`)).join(" ")}</p>
         <p><strong>${t("ui.nextStep")}:</strong> ${scheme.next} ${nextLink ? `<a class="inline-action" href="${nextLink.href}" ${nextLink.href.startsWith("http") ? 'target="_blank" rel="noreferrer"' : ""}>${t(nextLink.labelKey)}</a>` : ""}</p>
+        ${actionPrep}
       </article>
     `;
   }
@@ -537,8 +675,10 @@
           </div>
           <div class="result-actions">
             <button class="action-button primary" type="button" data-action="restart">${t("ui.restart")}</button>
+            <button class="action-button secondary" type="button" data-action="print">${t("ui.print")}</button>
           </div>
         </div>
+        ${renderPrintSummary(groups)}
         <section class="contact-panel">
           <div>
             <h2>${t("contact.title")}</h2>
@@ -562,6 +702,7 @@
       </section>
     `;
     app.querySelector("[data-action='restart']").addEventListener("click", renderLanding);
+    app.querySelector("[data-action='print']").addEventListener("click", () => window.print());
   }
 
   function renderSupervisor() {

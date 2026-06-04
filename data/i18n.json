@@ -16,7 +16,8 @@
       "supportGoWhere": "Visit SupportGoWhere",
       "start": "Start",
       "supervisor": "Supervisor review guide",
-      "openGovBenefits": "Open govbenefits"
+      "openGovBenefits": "Open govbenefits",
+      "print": "Print summary"
     },
     "landing": {
       "title": "Senior schemes finder",
@@ -114,7 +115,7 @@
         "hint": "Check CPF or insurer records if unsure."
       },
       "medisaveBalance": {
-        "title": "Is your MediSave balance at least ,000?",
+        "title": "Is your MediSave balance at least $5,000?",
         "hint": "This helps check MediSave Care and ElderFund fit."
       }
     },
@@ -192,8 +193,8 @@
       "careshield_life_policy": "CareShield Life",
       "eldershield_policy": "ElderShield",
       "no_ltc_policy": "No CareShield Life or ElderShield",
-      "medisave_5000_plus": "Yes, ,000 or more",
-      "medisave_under_5000": "No, below ,000",
+      "medisave_5000_plus": "Yes, $5,000 or more",
+      "medisave_under_5000": "No, below $5,000",
       "medisave_not_sure": "Not sure",
       "no_care_services": "No care services needed now"
     },
@@ -450,6 +451,68 @@
       "title": "Official sources used",
       "note": "Rules change. Use these links for latest official confirmation.",
       "checked": "Checked on"
+    },
+    "browse": {
+      "title": "Browse by need",
+      "lead": "Not sure where to start? Explore common needs first, then run the full checker.",
+      "kicker": "Browse",
+      "note": "These are schemes to explore. Use the checker for a better fit based on age, residency, income, and care needs.",
+      "schemes": "schemes",
+      "checkFit": "Check my fit",
+      "cash": "Cash and payouts",
+      "health": "Healthcare costs",
+      "care": "Caregiving and home care",
+      "mobility": "Mobility and devices",
+      "disability": "Disability support",
+      "community": "Community support"
+    },
+    "actionPrep": {
+      "title": "Before you act",
+      "route": "Route"
+    },
+    "actionModes": {
+      "automatic": "Usually assessed automatically",
+      "apply": "Apply or check online",
+      "provider": "Ask an approved provider to help apply",
+      "assessment": "Needs assessment before claim or application",
+      "claim": "Submit a claim after policy or disability check",
+      "enrol": "Enrol or ask a clinic",
+      "call": "Call or visit for guided help",
+      "check": "Check official eligibility or claim details"
+    },
+    "actionChecks": {
+      "needSummary": "Prepare a short summary of care, health, or social needs.",
+      "homeArea": "Share home area so support can be matched nearby.",
+      "ageResidency": "Confirm age and Singapore Citizen/PR status.",
+      "identity": "Keep NRIC or Singpass details ready if applying.",
+      "incomeOrAv": "Check household income per person or home Annual Value.",
+      "singpass": "Use Singpass or official portal if final confirmation is needed.",
+      "banking": "Check PayNow-NRIC or GovCash payment details where relevant.",
+      "cpf": "CPF records may be used for automatic assessment.",
+      "household": "Household support or property checks may affect outcome.",
+      "workIncome": "Prepare recent work-income records if working or self-employed.",
+      "medisaveContribution": "Self-employed applicants may need MediSave contribution records.",
+      "incomeSupport": "Prepare income, savings, expenses, and family-support details.",
+      "adlAssessment": "A disability assessment may be needed for daily-activity support.",
+      "provider": "Ask an AIC-linked provider before buying items or starting services.",
+      "deviceNeed": "Describe device or mobility need clearly.",
+      "buyAfterApproval": "Apply before buying subsidised healthcare items.",
+      "course": "Choose an approved caregiver course before registration.",
+      "careRecipient": "Confirm care recipient age or disability status.",
+      "mdwEmployer": "Confirm MDW employer or planned hiring details.",
+      "sameAddress": "Confirm MDW and care recipient live at the same address if required.",
+      "pioneerStatus": "Check Pioneer status and citizenship-date rules.",
+      "ltcCoverage": "Check CareShield Life, ElderShield, or no-policy status.",
+      "policy": "Check policy status through CPF, insurer, or Singpass.",
+      "medisaveBalance": "Check MediSave balance before deciding next step.",
+      "clinic": "Choose or contact a Healthier SG clinic.",
+      "chronicNeeds": "List chronic conditions and current medications.",
+      "citizenshipDate": "Confirm citizenship date if generation-package eligibility is unclear.",
+      "claimDate": "Check claim and use-by dates on govbenefits."
+    },
+    "print": {
+      "title": "AskSGO summary",
+      "answers": "Answers used"
     }
   },
   "zh": {
@@ -469,7 +532,8 @@
       "supportGoWhere": "前往 SupportGoWhere",
       "start": "开始",
       "supervisor": "导师评审指南",
-      "openGovBenefits": "打开 govbenefits"
+      "openGovBenefits": "打开 govbenefits",
+      "print": "打印摘要"
     },
     "landing": {
       "title": "乐龄援助计划查询",
@@ -567,7 +631,7 @@
         "hint": "Check CPF or insurer records if unsure."
       },
       "medisaveBalance": {
-        "title": "Is your MediSave balance at least ,000?",
+        "title": "Is your MediSave balance at least $5,000?",
         "hint": "This helps check MediSave Care and ElderFund fit."
       }
     },
@@ -645,8 +709,8 @@
       "careshield_life_policy": "CareShield Life",
       "eldershield_policy": "ElderShield",
       "no_ltc_policy": "No CareShield Life or ElderShield",
-      "medisave_5000_plus": "Yes, ,000 or more",
-      "medisave_under_5000": "No, below ,000",
+      "medisave_5000_plus": "Yes, $5,000 or more",
+      "medisave_under_5000": "No, below $5,000",
       "medisave_not_sure": "Not sure",
       "no_care_services": "No care services needed now"
     },
@@ -903,6 +967,68 @@
       "title": "使用的官方来源",
       "note": "规则会改变。请用这些链接作最新官方确认。",
       "checked": "检查日期"
+    },
+    "browse": {
+      "title": "按需要浏览",
+      "lead": "不确定从哪里开始？可先看看常见需要，再完成完整检查。",
+      "kicker": "浏览",
+      "note": "这些是可先了解的计划。请使用检查器，根据年龄、身份、收入和护理需要作更合适的判断。",
+      "schemes": "项计划",
+      "checkFit": "检查是否适合我",
+      "cash": "现金和津贴",
+      "health": "医疗费用",
+      "care": "照护和居家护理",
+      "mobility": "行动和辅助器材",
+      "disability": "失能支援",
+      "community": "社区支援"
+    },
+    "actionPrep": {
+      "title": "行动前准备",
+      "route": "办理方式"
+    },
+    "actionModes": {
+      "automatic": "通常自动评估",
+      "apply": "网上申请或查询",
+      "provider": "请认可服务提供者协助申请",
+      "assessment": "申请或索偿前需要评估",
+      "claim": "完成保单或失能检查后索偿",
+      "enrol": "登记或询问诊所",
+      "call": "致电或到访以取得协助",
+      "check": "查询官方资格或领取详情"
+    },
+    "actionChecks": {
+      "needSummary": "准备一段简短说明，概括护理、健康或社交需要。",
+      "homeArea": "说明住家地区，以便配对附近支援。",
+      "ageResidency": "确认年龄以及新加坡公民/PR身份。",
+      "identity": "如需申请，请准备NRIC或Singpass资料。",
+      "incomeOrAv": "查询家庭每人收入或住家年值。",
+      "singpass": "如需最终确认，请使用Singpass或官方网站。",
+      "banking": "如适用，请检查PayNow-NRIC或GovCash付款资料。",
+      "cpf": "自动评估可能会使用CPF记录。",
+      "household": "家庭支援或房产检查可能影响结果。",
+      "workIncome": "如有工作或自雇，请准备近期工作收入记录。",
+      "medisaveContribution": "自雇申请者可能需要MediSave缴款记录。",
+      "incomeSupport": "准备收入、储蓄、开支和家庭支援资料。",
+      "adlAssessment": "日常活动支援可能需要失能评估。",
+      "provider": "购买用品或开始服务前，先询问AIC相关服务提供者。",
+      "deviceNeed": "清楚说明辅助器材或行动需要。",
+      "buyAfterApproval": "购买可补贴医疗用品前先申请。",
+      "course": "报名之前，先选择受认可的照护者课程。",
+      "careRecipient": "确认受照护者年龄或失能状态。",
+      "mdwEmployer": "确认MDW雇主或计划聘请资料。",
+      "sameAddress": "如有要求，确认MDW和受照护者住在同一地址。",
+      "pioneerStatus": "检查Pioneer身份和公民日期规则。",
+      "ltcCoverage": "检查CareShield Life、ElderShield或无保单状态。",
+      "policy": "通过CPF、保险公司或Singpass检查保单状态。",
+      "medisaveBalance": "决定下一步前，先检查MediSave余额。",
+      "clinic": "选择或联系Healthier SG诊所。",
+      "chronicNeeds": "列出慢性病和目前服用的药物。",
+      "citizenshipDate": "如世代配套资格不清楚，请确认公民日期。",
+      "claimDate": "在govbenefits查看领取和使用期限。"
+    },
+    "print": {
+      "title": "AskSGO 摘要",
+      "answers": "已使用的回答"
     }
   },
   "ms": {
@@ -922,7 +1048,8 @@
       "supportGoWhere": "Lawati SupportGoWhere",
       "start": "Mula",
       "supervisor": "Panduan penilaian penyelia",
-      "openGovBenefits": "Buka govbenefits"
+      "openGovBenefits": "Buka govbenefits",
+      "print": "Cetak ringkasan"
     },
     "landing": {
       "title": "Pencari skim warga emas",
@@ -1020,7 +1147,7 @@
         "hint": "Check CPF or insurer records if unsure."
       },
       "medisaveBalance": {
-        "title": "Is your MediSave balance at least ,000?",
+        "title": "Is your MediSave balance at least $5,000?",
         "hint": "This helps check MediSave Care and ElderFund fit."
       }
     },
@@ -1098,8 +1225,8 @@
       "careshield_life_policy": "CareShield Life",
       "eldershield_policy": "ElderShield",
       "no_ltc_policy": "No CareShield Life or ElderShield",
-      "medisave_5000_plus": "Yes, ,000 or more",
-      "medisave_under_5000": "No, below ,000",
+      "medisave_5000_plus": "Yes, $5,000 or more",
+      "medisave_under_5000": "No, below $5,000",
       "medisave_not_sure": "Not sure",
       "no_care_services": "No care services needed now"
     },
@@ -1356,6 +1483,68 @@
       "title": "Sumber rasmi digunakan",
       "note": "Peraturan boleh berubah. Gunakan pautan ini untuk pengesahan rasmi terkini.",
       "checked": "Disemak pada"
+    },
+    "browse": {
+      "title": "Semak ikut keperluan",
+      "lead": "Tidak pasti mula di mana? Lihat keperluan biasa dahulu, kemudian jalankan pemeriksa penuh.",
+      "kicker": "Semak",
+      "note": "Ini skim untuk diteroka. Gunakan pemeriksa untuk padanan lebih baik berdasarkan umur, status, pendapatan, dan keperluan jagaan.",
+      "schemes": "skim",
+      "checkFit": "Semak padanan saya",
+      "cash": "Tunai dan bayaran",
+      "health": "Kos kesihatan",
+      "care": "Penjagaan dan jagaan rumah",
+      "mobility": "Mobiliti dan alat bantuan",
+      "disability": "Sokongan kurang upaya",
+      "community": "Sokongan masyarakat"
+    },
+    "actionPrep": {
+      "title": "Sebelum bertindak",
+      "route": "Laluan"
+    },
+    "actionModes": {
+      "automatic": "Biasanya dinilai secara automatik",
+      "apply": "Mohon atau semak dalam talian",
+      "provider": "Minta penyedia diluluskan bantu memohon",
+      "assessment": "Perlu penilaian sebelum tuntutan atau permohonan",
+      "claim": "Hantar tuntutan selepas semakan polisi atau kurang upaya",
+      "enrol": "Daftar atau tanya klinik",
+      "call": "Hubungi atau lawati untuk bantuan berpandu",
+      "check": "Semak kelayakan rasmi atau butiran tuntutan"
+    },
+    "actionChecks": {
+      "needSummary": "Sediakan ringkasan ringkas tentang keperluan jagaan, kesihatan, atau sosial.",
+      "homeArea": "Kongsi kawasan rumah supaya sokongan berdekatan boleh dipadankan.",
+      "ageResidency": "Sahkan umur dan status Warganegara Singapura/PR.",
+      "identity": "Sediakan NRIC atau butiran Singpass jika memohon.",
+      "incomeOrAv": "Semak pendapatan isi rumah setiap orang atau Nilai Tahunan rumah.",
+      "singpass": "Gunakan Singpass atau portal rasmi jika perlu pengesahan akhir.",
+      "banking": "Semak PayNow-NRIC atau butiran GovCash jika berkaitan.",
+      "cpf": "Rekod CPF mungkin digunakan untuk penilaian automatik.",
+      "household": "Sokongan isi rumah atau semakan hartanah mungkin menjejaskan keputusan.",
+      "workIncome": "Sediakan rekod pendapatan kerja terkini jika bekerja atau bekerja sendiri.",
+      "medisaveContribution": "Pemohon bekerja sendiri mungkin perlukan rekod caruman MediSave.",
+      "incomeSupport": "Sediakan butiran pendapatan, simpanan, perbelanjaan, dan sokongan keluarga.",
+      "adlAssessment": "Penilaian kurang upaya mungkin diperlukan untuk sokongan aktiviti harian.",
+      "provider": "Tanya penyedia berkaitan AIC sebelum membeli barangan atau memulakan perkhidmatan.",
+      "deviceNeed": "Terangkan keperluan alat atau mobiliti dengan jelas.",
+      "buyAfterApproval": "Mohon sebelum membeli barangan kesihatan bersubsidi.",
+      "course": "Pilih kursus penjaga yang diluluskan sebelum pendaftaran.",
+      "careRecipient": "Sahkan umur penerima jagaan atau status kurang upaya.",
+      "mdwEmployer": "Sahkan butiran majikan MDW atau rancangan pengambilan.",
+      "sameAddress": "Sahkan MDW dan penerima jagaan tinggal di alamat sama jika diperlukan.",
+      "pioneerStatus": "Semak status Pioneer dan peraturan tarikh kewarganegaraan.",
+      "ltcCoverage": "Semak status CareShield Life, ElderShield, atau tiada polisi.",
+      "policy": "Semak status polisi melalui CPF, syarikat insurans, atau Singpass.",
+      "medisaveBalance": "Semak baki MediSave sebelum menentukan langkah seterusnya.",
+      "clinic": "Pilih atau hubungi klinik Healthier SG.",
+      "chronicNeeds": "Senaraikan penyakit kronik dan ubat semasa.",
+      "citizenshipDate": "Sahkan tarikh kewarganegaraan jika kelayakan pakej generasi tidak jelas.",
+      "claimDate": "Semak tarikh tuntutan dan penggunaan di govbenefits."
+    },
+    "print": {
+      "title": "Ringkasan AskSGO",
+      "answers": "Jawapan digunakan"
     }
   },
   "ta": {
@@ -1375,7 +1564,8 @@
       "supportGoWhere": "SupportGoWhere செல்லவும்",
       "start": "தொடங்கு",
       "supervisor": "மேற்பார்வையாளர் மதிப்பீட்டு வழிகாட்டி",
-      "openGovBenefits": "govbenefits திறக்கவும்"
+      "openGovBenefits": "govbenefits திறக்கவும்",
+      "print": "சுருக்கத்தை அச்சிடு"
     },
     "landing": {
       "title": "மூத்தோர் திட்டங்கள் தேடல்",
@@ -1473,7 +1663,7 @@
         "hint": "Check CPF or insurer records if unsure."
       },
       "medisaveBalance": {
-        "title": "Is your MediSave balance at least ,000?",
+        "title": "Is your MediSave balance at least $5,000?",
         "hint": "This helps check MediSave Care and ElderFund fit."
       }
     },
@@ -1551,8 +1741,8 @@
       "careshield_life_policy": "CareShield Life",
       "eldershield_policy": "ElderShield",
       "no_ltc_policy": "No CareShield Life or ElderShield",
-      "medisave_5000_plus": "Yes, ,000 or more",
-      "medisave_under_5000": "No, below ,000",
+      "medisave_5000_plus": "Yes, $5,000 or more",
+      "medisave_under_5000": "No, below $5,000",
       "medisave_not_sure": "Not sure",
       "no_care_services": "No care services needed now"
     },
@@ -1809,6 +1999,68 @@
       "title": "பயன்படுத்திய அதிகாரப்பூர்வ ஆதாரங்கள்",
       "note": "விதிகள் மாறலாம். சமீபத்திய அதிகாரப்பூர்வ உறுதிப்படுத்தலுக்கு இவ்விணைப்புகளைப் பயன்படுத்தவும்.",
       "checked": "சரிபார்க்கப்பட்ட தேதி"
+    },
+    "browse": {
+      "title": "தேவையின்படி பார்க்க",
+      "lead": "எங்கே தொடங்குவது தெரியவில்லையா? முதலில் பொதுவான தேவைகளைப் பாருங்கள்; பிறகு முழு சரிபார்ப்பை செய்யுங்கள்.",
+      "kicker": "பார்க்க",
+      "note": "இவை முதலில் அறிந்து கொள்ள வேண்டிய திட்டங்கள். வயது, குடியிருப்பு நிலை, வருமானம் மற்றும் பராமரிப்பு தேவைகள் அடிப்படையில் பொருத்தத்தை அறிய சரிபார்ப்பைப் பயன்படுத்தவும்.",
+      "schemes": "திட்டங்கள்",
+      "checkFit": "எனக்கு பொருந்துமா பார்க்க",
+      "cash": "பணம் மற்றும் தொகைகள்",
+      "health": "சுகாதார செலவுகள்",
+      "care": "பராமரிப்பு மற்றும் வீட்டு பராமரிப்பு",
+      "mobility": "நகர்வு மற்றும் உதவி சாதனங்கள்",
+      "disability": "இயலாமை ஆதரவு",
+      "community": "சமூக ஆதரவு"
+    },
+    "actionPrep": {
+      "title": "செயலுக்கு முன்",
+      "route": "வழி"
+    },
+    "actionModes": {
+      "automatic": "பொதுவாக தானாக மதிப்பிடப்படும்",
+      "apply": "ஆன்லைனில் விண்ணப்பிக்க அல்லது பார்க்க",
+      "provider": "அங்கீகரிக்கப்பட்ட வழங்குநரிடம் விண்ணப்ப உதவி கேட்க",
+      "assessment": "கோரிக்கை அல்லது விண்ணப்பத்திற்கு முன் மதிப்பீடு தேவை",
+      "claim": "காப்பீடு அல்லது இயலாமை சரிபார்த்த பிறகு கோரிக்கை சமர்ப்பிக்க",
+      "enrol": "பதிவு செய்ய அல்லது கிளினிக்கில் கேட்க",
+      "call": "வழிகாட்டிய உதவிக்கு அழைக்க அல்லது செல்ல",
+      "check": "அதிகாரப்பூர்வ தகுதி அல்லது கோரிக்கை விவரம் பார்க்க"
+    },
+    "actionChecks": {
+      "needSummary": "பராமரிப்பு, சுகாதாரம் அல்லது சமூக தேவைகளைச் சுருக்கமாக தயார் செய்யுங்கள்.",
+      "homeArea": "அருகிலுள்ள ஆதரவை பொருத்த வீட்டுப் பகுதியை பகிருங்கள்.",
+      "ageResidency": "வயதும் சிங்கப்பூர் குடிமகன்/PR நிலையும் உறுதி செய்யுங்கள்.",
+      "identity": "விண்ணப்பிக்கும் போது NRIC அல்லது Singpass விவரங்களை தயார் வைத்திருங்கள்.",
+      "incomeOrAv": "குடும்பத்தின் ஒருவருக்கான வருமானம் அல்லது வீட்டின் ஆண்டு மதிப்பைச் சரிபார்க்கவும்.",
+      "singpass": "இறுதி உறுதிப்பாட்டுக்கு Singpass அல்லது அதிகாரப்பூர்வ தளத்தைப் பயன்படுத்தவும்.",
+      "banking": "தேவைப்பட்டால் PayNow-NRIC அல்லது GovCash விவரங்களைச் சரிபார்க்கவும்.",
+      "cpf": "தானியங்கி மதிப்பீட்டுக்கு CPF பதிவுகள் பயன்படுத்தப்படலாம்.",
+      "household": "குடும்ப ஆதரவு அல்லது சொத்து சோதனை முடிவை பாதிக்கலாம்.",
+      "workIncome": "வேலை செய்கிறீர்கள் அல்லது சுயதொழில் என்றால் அண்மைய வேலை வருமான பதிவுகளைத் தயார் செய்யுங்கள்.",
+      "medisaveContribution": "சுயதொழில் விண்ணப்பதாரர்களுக்கு MediSave பங்களிப்பு பதிவுகள் தேவைப்படலாம்.",
+      "incomeSupport": "வருமானம், சேமிப்பு, செலவுகள் மற்றும் குடும்ப ஆதரவு விவரங்களைத் தயார் செய்யுங்கள்.",
+      "adlAssessment": "தினசரி செயல்பாட்டு ஆதரவுக்கு இயலாமை மதிப்பீடு தேவைப்படலாம்.",
+      "provider": "பொருட்கள் வாங்குவதற்கு அல்லது சேவைகள் தொடங்குவதற்கு முன் AIC தொடர்புடைய வழங்குநரிடம் கேளுங்கள்.",
+      "deviceNeed": "சாதனம் அல்லது நகர்வு தேவையை தெளிவாக விளக்குங்கள்.",
+      "buyAfterApproval": "தள்ளுபடி சுகாதார பொருட்கள் வாங்குவதற்கு முன் விண்ணப்பியுங்கள்.",
+      "course": "பதிவுக்கு முன் அங்கீகரிக்கப்பட்ட பராமரிப்பாளர் பாடநெறியைத் தேர்ந்தெடுக்கவும்.",
+      "careRecipient": "பராமரிப்பு பெறுபவரின் வயது அல்லது இயலாமை நிலையை உறுதி செய்யுங்கள்.",
+      "mdwEmployer": "MDW வேலைவாய்ப்பாளர் அல்லது பணியமர்த்தும் திட்ட விவரங்களை உறுதி செய்யுங்கள்.",
+      "sameAddress": "தேவைப்பட்டால் MDW மற்றும் பராமரிப்பு பெறுபவர் ஒரே முகவரியில் இருப்பதை உறுதி செய்யுங்கள்.",
+      "pioneerStatus": "Pioneer நிலை மற்றும் குடிமகன் தேதி விதிகளைச் சரிபார்க்கவும்.",
+      "ltcCoverage": "CareShield Life, ElderShield அல்லது காப்பீடு இல்லை என்ற நிலையைச் சரிபார்க்கவும்.",
+      "policy": "CPF, காப்பீட்டாளர் அல்லது Singpass மூலம் பாலிசி நிலையைச் சரிபார்க்கவும்.",
+      "medisaveBalance": "அடுத்த படி முடிவெடுக்க முன் MediSave இருப்பைச் சரிபார்க்கவும்.",
+      "clinic": "Healthier SG கிளினிக்கைத் தேர்வு செய்யவும் அல்லது தொடர்பு கொள்ளவும்.",
+      "chronicNeeds": "நீண்டநாள் நோய்களையும் தற்போது எடுத்துக் கொள்ளும் மருந்துகளையும் பட்டியலிடுங்கள்.",
+      "citizenshipDate": "தலைமுறை தொகுப்பு தகுதி தெளிவில்லையெனில் குடிமகன் தேதியை உறுதி செய்யுங்கள்.",
+      "claimDate": "govbenefits இல் கோரிக்கை மற்றும் பயன்படுத்தும் தேதிகளைச் சரிபார்க்கவும்."
+    },
+    "print": {
+      "title": "AskSGO சுருக்கம்",
+      "answers": "பயன்படுத்திய பதில்கள்"
     }
   }
 }
