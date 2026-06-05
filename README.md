@@ -101,7 +101,7 @@ The app deliberately avoids overclaiming eligibility. Some results are marked `M
 
 ## Supervisor Review
 
-Landing screen includes a compact `Supervisor review guide`. It summarises:
+A hidden `/#supervisor` route includes a compact supervisor review guide. It summarises:
 
 - SGO goal alignment
 - policy accuracy guardrails

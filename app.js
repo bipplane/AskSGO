@@ -207,7 +207,6 @@
           </div>
           <div class="start-row">
             <button class="action-button primary start-button" type="button" data-action="start">${t("ui.start")}</button>
-            <button class="link-button supervisor-link" type="button" data-action="supervisor">${t("ui.supervisor")}</button>
           </div>
           <div class="browse-panel">
             <h2>${t("browse.title")}</h2>
@@ -254,7 +253,6 @@
       state.step = 0;
       renderQuestion();
     });
-    app.querySelector("[data-action='supervisor']").addEventListener("click", renderSupervisor);
     app.querySelectorAll("[data-need]").forEach((button) => {
       button.addEventListener("click", () => renderBrowse(button.dataset.need));
     });
@@ -706,6 +704,7 @@
   }
 
   function renderSupervisor() {
+    window.location.hash = "supervisor";
     app.innerHTML = `
       <section class="results-stage supervisor-stage">
         <div class="results-header">
@@ -750,8 +749,23 @@
         </section>
       </section>
     `;
-    app.querySelector("[data-action='restart']").addEventListener("click", renderLanding);
+    app.querySelector("[data-action='restart']").addEventListener("click", () => {
+      window.location.hash = "";
+      renderLanding();
+    });
   }
 
-  renderLanding();
+  if (window.location.hash === "#supervisor") {
+    renderSupervisor();
+  } else {
+    renderLanding();
+  }
+
+  window.addEventListener("hashchange", () => {
+    if (window.location.hash === "#supervisor") {
+      renderSupervisor();
+      return;
+    }
+    renderLanding();
+  });
 })();
