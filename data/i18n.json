@@ -196,7 +196,8 @@
       "medisave_5000_plus": "Yes, $5,000 or more",
       "medisave_under_5000": "No, below $5,000",
       "medisave_not_sure": "Not sure",
-      "no_care_services": "No care services needed now"
+      "no_care_services": "No care services needed now",
+      "no_health_needs": "None of these health or care needs"
     },
     "status": {
       "likely": "Likely eligible",
@@ -712,7 +713,8 @@
       "medisave_5000_plus": "是，$5,000 或以上",
       "medisave_under_5000": "否，少于 $5,000",
       "medisave_not_sure": "不确定",
-      "no_care_services": "目前不需要护理服务"
+      "no_care_services": "目前不需要护理服务",
+      "no_health_needs": "以上健康或护理需要皆无"
     },
     "status": {
       "likely": "可能符合",
@@ -1228,7 +1230,8 @@
       "medisave_5000_plus": "Ya, $5,000 atau lebih",
       "medisave_under_5000": "Tidak, kurang daripada $5,000",
       "medisave_not_sure": "Tidak pasti",
-      "no_care_services": "Tiada perkhidmatan jagaan diperlukan sekarang"
+      "no_care_services": "Tiada perkhidmatan jagaan diperlukan sekarang",
+      "no_health_needs": "Tiada keperluan kesihatan atau jagaan ini"
     },
     "status": {
       "likely": "Kemungkinan layak",
@@ -1744,7 +1747,8 @@
       "medisave_5000_plus": "ஆம், $5,000 அல்லது அதற்கு மேல்",
       "medisave_under_5000": "இல்லை, $5,000 க்குக் குறைவாக",
       "medisave_not_sure": "தெரியவில்லை",
-      "no_care_services": "இப்போது பராமரிப்பு சேவைகள் தேவையில்லை"
+      "no_care_services": "இப்போது பராமரிப்பு சேவைகள் தேவையில்லை",
+      "no_health_needs": "இந்த உடல்நலம் அல்லது பராமரிப்பு தேவைகள் எதுவும் இல்லை"
     },
     "status": {
       "likely": "தகுதி இருக்கலாம்",

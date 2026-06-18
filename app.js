@@ -124,14 +124,15 @@
     {
       id: "healthNeeds",
       multi: true,
-      choices: ["chronic", "mobility", "moderate_disability", "severe_disability", "home_care", "social_isolation", "none"]
+      exclusiveChoice: "no_health_needs",
+      choices: ["chronic", "mobility", "moderate_disability", "severe_disability", "home_care", "social_isolation", "no_health_needs"]
     },
     {
       id: "careServices",
       multi: true,
       exclusiveChoice: "no_care_services",
       choices: ["home_nursing", "home_medical", "home_palliative", "day_hospice", "centre_care", "nursing_home_hospice", "mental_health", "acp", "no_care_services"],
-      showIf: () => (state.answers.healthNeeds || []).some((need) => need !== "none")
+      showIf: () => (state.answers.healthNeeds || []).some((need) => need !== "no_health_needs")
     },
     {
       id: "caregiverTraining",
@@ -454,8 +455,16 @@
     return ["home_nursing", "home_medical", "home_palliative", "day_hospice"].some(hasCareService);
   }
 
-  function wantsCaregiverTraining() {
-    return ["family_caregiver_training", "mdw_caregiver_training"].includes(state.answers.caregiverTraining);
+  function hasHomeCareNeed() {
+    return hasNeed("home_care") || hasHomeHealthcareService();
+  }
+
+  function wantsFamilyCaregiverTraining() {
+    return state.answers.caregiverTraining === "family_caregiver_training";
+  }
+
+  function wantsMdwCaregiverTraining() {
+    return state.answers.caregiverTraining === "mdw_caregiver_training";
   }
 
   function hasOrPlansMdw() {
@@ -471,7 +480,7 @@
     const age = ageMin();
     const workIncome = state.answers.workIncome || "none";
     const hdb = ["hdb_1_2", "hdb_3", "hdb_4plus"].includes(state.answers.housing);
-    const disabled = hasNeed("moderate_disability") || hasNeed("severe_disability") || hasNeed("home_care");
+    const disabled = hasNeed("moderate_disability") || hasNeed("severe_disability") || hasHomeCareNeed();
     const severe = hasNeed("severe_disability");
     const careNeed = disabled || hasNeed("social_isolation") || (state.answers.careServices || []).some((service) => service !== "no_care_services") || state.answers.living === "care_facility";
     const weakSupport = ["limited", "little_none"].includes(state.answers.support);
@@ -531,18 +540,19 @@
     else if (resident() && (lowIncome() || weakSupport)) addScheme(groups, "maybe", "comcare", ["msfAssess"]);
     else addScheme(groups, "no", "comcare", ["lowIncome"]);
 
-    if (resident() && severe && hasNeed("home_care") && citizen() && hcgMeansPossible()) addScheme(groups, "likely", "home_caregiving", ["severeDisability", "homeCare"]);
-    else if (resident() && (disabled || hasNeed("home_care"))) addScheme(groups, "maybe", "home_caregiving", ["needsAdlAssessment"]);
+    if (resident() && severe && hasHomeCareNeed() && citizen() && hcgMeansPossible()) addScheme(groups, "likely", "home_caregiving", ["severeDisability", "homeCare"]);
+    else if (resident() && disabled) addScheme(groups, "maybe", "home_caregiving", ["needsAdlAssessment"]);
     else addScheme(groups, "no", "home_caregiving", ["disability"]);
 
     if (resident() && hasNeed("mobility")) addScheme(groups, "likely", "smf", ["mobility", "resident"]);
     else addScheme(groups, "no", "smf", ["mobility"]);
 
     if (resident() && hasHomeHealthcareService() && idapeMeansPossible()) addScheme(groups, "likely", "smf_home_items", ["homeCare", "meansTest", "providerApply"]);
-    else if (resident() && (hasNeed("home_care") || hasHomeHealthcareService())) addScheme(groups, "maybe", "smf_home_items", ["homeCare", "providerApply"]);
+    else if (resident() && hasHomeCareNeed()) addScheme(groups, "maybe", "smf_home_items", ["homeCare", "providerApply"]);
     else addScheme(groups, "no", "smf_home_items", ["homeCare"]);
 
-    if (resident() && (age >= 65 || disabled) && wantsCaregiverTraining()) addScheme(groups, "likely", "caregiver_training", ["age65OrDisability", "caregiverCourse"]);
+    if (resident() && (age >= 65 || disabled) && (wantsFamilyCaregiverTraining() || (wantsMdwCaregiverTraining() && hasOrPlansMdw()))) addScheme(groups, "likely", "caregiver_training", ["age65OrDisability", "caregiverCourse"]);
+    else if (resident() && (age >= 65 || disabled) && wantsMdwCaregiverTraining()) addScheme(groups, "maybe", "caregiver_training", ["age65OrDisability", "caregiverCourse", "mdwEmployerCheck"]);
     else if (resident() && (age >= 65 || disabled) && state.answers.caregiverTraining === "not_sure") addScheme(groups, "maybe", "caregiver_training", ["age65OrDisability", "caregiverCourse"]);
     else addScheme(groups, "no", "caregiver_training", ["age65OrDisability"]);
 
