@@ -615,24 +615,24 @@
         "hint": "请选择最接近的选项。"
       },
       "careServices": {
-        "title": "Which care services are you receiving or looking for?",
-        "hint": "Choose all that apply."
+        "title": "您正在接受或正在寻找哪些护理服务？",
+        "hint": "请选择所有适用的项目。"
       },
       "caregiverTraining": {
-        "title": "Does a caregiver need training?",
-        "hint": "Choose the closest match."
+        "title": "照护者是否需要培训？",
+        "hint": "请选择最接近的选项。"
       },
       "mdwCare": {
-        "title": "Do you have or plan to hire a migrant domestic worker for care?",
-        "hint": "This helps check MDW levy concession."
+        "title": "您是否已有或计划聘请外籍家庭佣工协助照护？",
+        "hint": "这有助于检查外籍家庭佣工税优惠。"
       },
       "ltcCoverage": {
-        "title": "Which long-term care insurance do you have?",
-        "hint": "Check CPF or insurer records if unsure."
+        "title": "您有哪些长期护理保险？",
+        "hint": "不确定时，请检查 CPF 或保险公司记录。"
       },
       "medisaveBalance": {
-        "title": "Is your MediSave balance at least $5,000?",
-        "hint": "This helps check MediSave Care and ElderFund fit."
+        "title": "您的 MediSave 户头余额是否至少有 $5,000？",
+        "hint": "这有助于判断 MediSave Care 和 ElderFund 是否适合。"
       }
     },
     "choices": {
@@ -692,27 +692,27 @@
       "adequate": "支援足够",
       "limited": "支援有限",
       "little_none": "很少或没有支援",
-      "home_nursing": "Home nursing",
-      "home_medical": "Home medical",
-      "home_palliative": "Home palliative care",
-      "day_hospice": "Day hospice care",
-      "centre_care": "Day care, rehabilitation, or centre-based care",
-      "nursing_home_hospice": "Nursing home or inpatient hospice",
-      "mental_health": "Mental health support",
-      "acp": "Advance Care Planning (ACP)",
-      "family_caregiver_training": "Family caregiver wants training",
-      "mdw_caregiver_training": "Domestic helper wants training",
-      "no_training_needed": "No caregiver training needed",
-      "have_mdw_same_home": "Have MDW living at same address",
-      "planning_mdw": "Planning to hire MDW",
-      "no_mdw": "No MDW",
+      "home_nursing": "居家护理",
+      "home_medical": "居家医疗",
+      "home_palliative": "居家舒缓护理",
+      "day_hospice": "日间临终关怀",
+      "centre_care": "日间护理、复健或中心护理",
+      "nursing_home_hospice": "疗养院或住院临终关怀",
+      "mental_health": "心理健康支持",
+      "acp": "预先护理计划 (ACP)",
+      "family_caregiver_training": "家庭照护者想接受培训",
+      "mdw_caregiver_training": "外籍家庭佣工想接受培训",
+      "no_training_needed": "不需要照护者培训",
+      "have_mdw_same_home": "已有同住的外籍家庭佣工",
+      "planning_mdw": "计划聘请外籍家庭佣工",
+      "no_mdw": "没有外籍家庭佣工",
       "careshield_life_policy": "CareShield Life",
       "eldershield_policy": "ElderShield",
-      "no_ltc_policy": "No CareShield Life or ElderShield",
-      "medisave_5000_plus": "Yes, $5,000 or more",
-      "medisave_under_5000": "No, below $5,000",
-      "medisave_not_sure": "Not sure",
-      "no_care_services": "No care services needed now"
+      "no_ltc_policy": "没有 CareShield Life 或 ElderShield",
+      "medisave_5000_plus": "是，$5,000 或以上",
+      "medisave_under_5000": "否，少于 $5,000",
+      "medisave_not_sure": "不确定",
+      "no_care_services": "目前不需要护理服务"
     },
     "status": {
       "likely": "可能符合",
@@ -766,7 +766,7 @@
       "mdwEmployerCheck": "This requires an MDW employer and care recipient living at the same address.",
       "idapeAgeCoverage": "IDAPE is for older Citizens who could not benefit from ElderShield because of age or pre-existing disability.",
       "policyholderCheck": "Coverage or policyholder status must be checked through CPF, insurer, or Singpass.",
-      "careServices": "AIC lists home, centre, clinic, nursing home, hospice, mental health, and ACP care services."
+      "careServices": "AIC 列出居家、中心、诊所、疗养院、临终关怀、心理健康和 ACP 护理服务。"
     },
     "schemes": {
       "sgo_aac": {
@@ -1131,24 +1131,24 @@
         "hint": "Pilih yang paling hampir."
       },
       "careServices": {
-        "title": "Which care services are you receiving or looking for?",
-        "hint": "Choose all that apply."
+        "title": "Apakah perkhidmatan jagaan yang anda sedang terima atau cari?",
+        "hint": "Pilih semua yang berkenaan."
       },
       "caregiverTraining": {
-        "title": "Does a caregiver need training?",
-        "hint": "Choose the closest match."
+        "title": "Adakah penjaga memerlukan latihan?",
+        "hint": "Pilih jawapan yang paling hampir."
       },
       "mdwCare": {
-        "title": "Do you have or plan to hire a migrant domestic worker for care?",
-        "hint": "This helps check MDW levy concession."
+        "title": "Adakah anda mempunyai atau merancang untuk menggaji pekerja domestik migran bagi jagaan?",
+        "hint": "Ini membantu menyemak konsesi levi MDW."
       },
       "ltcCoverage": {
-        "title": "Which long-term care insurance do you have?",
-        "hint": "Check CPF or insurer records if unsure."
+        "title": "Insurans jagaan jangka panjang manakah yang anda ada?",
+        "hint": "Semak rekod CPF atau syarikat insurans jika tidak pasti."
       },
       "medisaveBalance": {
-        "title": "Is your MediSave balance at least $5,000?",
-        "hint": "This helps check MediSave Care and ElderFund fit."
+        "title": "Adakah baki MediSave anda sekurang-kurangnya $5,000?",
+        "hint": "Ini membantu menyemak kesesuaian MediSave Care dan ElderFund."
       }
     },
     "choices": {
@@ -1208,27 +1208,27 @@
       "adequate": "Sokongan mencukupi",
       "limited": "Sokongan terhad",
       "little_none": "Sedikit atau tiada sokongan",
-      "home_nursing": "Home nursing",
-      "home_medical": "Home medical",
-      "home_palliative": "Home palliative care",
-      "day_hospice": "Day hospice care",
-      "centre_care": "Day care, rehabilitation, or centre-based care",
-      "nursing_home_hospice": "Nursing home or inpatient hospice",
-      "mental_health": "Mental health support",
-      "acp": "Advance Care Planning (ACP)",
-      "family_caregiver_training": "Family caregiver wants training",
-      "mdw_caregiver_training": "Domestic helper wants training",
-      "no_training_needed": "No caregiver training needed",
-      "have_mdw_same_home": "Have MDW living at same address",
-      "planning_mdw": "Planning to hire MDW",
-      "no_mdw": "No MDW",
+      "home_nursing": "Kejururawatan di rumah",
+      "home_medical": "Rawatan perubatan di rumah",
+      "home_palliative": "Jagaan paliatif di rumah",
+      "day_hospice": "Jagaan hospis harian",
+      "centre_care": "Jagaan harian, pemulihan, atau jagaan berpusat",
+      "nursing_home_hospice": "Rumah jagaan atau hospis pesakit dalam",
+      "mental_health": "Sokongan kesihatan mental",
+      "acp": "Perancangan Jagaan Awal (ACP)",
+      "family_caregiver_training": "Penjaga keluarga mahu latihan",
+      "mdw_caregiver_training": "Pembantu rumah mahu latihan",
+      "no_training_needed": "Tiada latihan penjaga diperlukan",
+      "have_mdw_same_home": "Ada MDW yang tinggal di alamat yang sama",
+      "planning_mdw": "Merancang untuk menggaji MDW",
+      "no_mdw": "Tiada MDW",
       "careshield_life_policy": "CareShield Life",
       "eldershield_policy": "ElderShield",
-      "no_ltc_policy": "No CareShield Life or ElderShield",
-      "medisave_5000_plus": "Yes, $5,000 or more",
-      "medisave_under_5000": "No, below $5,000",
-      "medisave_not_sure": "Not sure",
-      "no_care_services": "No care services needed now"
+      "no_ltc_policy": "Tiada CareShield Life atau ElderShield",
+      "medisave_5000_plus": "Ya, $5,000 atau lebih",
+      "medisave_under_5000": "Tidak, kurang daripada $5,000",
+      "medisave_not_sure": "Tidak pasti",
+      "no_care_services": "Tiada perkhidmatan jagaan diperlukan sekarang"
     },
     "status": {
       "likely": "Kemungkinan layak",
@@ -1282,7 +1282,7 @@
       "mdwEmployerCheck": "This requires an MDW employer and care recipient living at the same address.",
       "idapeAgeCoverage": "IDAPE is for older Citizens who could not benefit from ElderShield because of age or pre-existing disability.",
       "policyholderCheck": "Coverage or policyholder status must be checked through CPF, insurer, or Singpass.",
-      "careServices": "AIC lists home, centre, clinic, nursing home, hospice, mental health, and ACP care services."
+      "careServices": "AIC menyenaraikan perkhidmatan jagaan di rumah, pusat, klinik, rumah jagaan, hospis, kesihatan mental, dan ACP."
     },
     "schemes": {
       "sgo_aac": {
@@ -1647,24 +1647,24 @@
         "hint": "மிக அருகான பதிலைத் தேர்வுசெய்க."
       },
       "careServices": {
-        "title": "Which care services are you receiving or looking for?",
-        "hint": "Choose all that apply."
+        "title": "நீங்கள் தற்போது பெறும் அல்லது தேடும் பராமரிப்பு சேவைகள் எவை?",
+        "hint": "பொருந்தும் அனைத்தையும் தேர்வுசெய்க."
       },
       "caregiverTraining": {
-        "title": "Does a caregiver need training?",
-        "hint": "Choose the closest match."
+        "title": "பராமரிப்பாளருக்கு பயிற்சி தேவையா?",
+        "hint": "மிக அருகான பதிலைத் தேர்வுசெய்க."
       },
       "mdwCare": {
-        "title": "Do you have or plan to hire a migrant domestic worker for care?",
-        "hint": "This helps check MDW levy concession."
+        "title": "பராமரிப்பிற்காக குடியேற்ற வீட்டு பணியாளரை வைத்துள்ளீர்களா அல்லது நியமிக்க திட்டமிடுகிறீர்களா?",
+        "hint": "இது MDW levy concession சரிபார்க்க உதவும்."
       },
       "ltcCoverage": {
-        "title": "Which long-term care insurance do you have?",
-        "hint": "Check CPF or insurer records if unsure."
+        "title": "உங்களிடம் எந்த நீண்டகால பராமரிப்பு காப்பீடு உள்ளது?",
+        "hint": "தெரியாவிட்டால் CPF அல்லது காப்பீட்டாளர் பதிவுகளைச் சரிபார்க்கவும்."
       },
       "medisaveBalance": {
-        "title": "Is your MediSave balance at least $5,000?",
-        "hint": "This helps check MediSave Care and ElderFund fit."
+        "title": "உங்கள் MediSave இருப்பு குறைந்தது $5,000 உள்ளதா?",
+        "hint": "இது MediSave Care மற்றும் ElderFund பொருந்துமா என்பதைச் சரிபார்க்க உதவும்."
       }
     },
     "choices": {
@@ -1724,27 +1724,27 @@
       "adequate": "போதுமான ஆதரவு",
       "limited": "குறைந்த ஆதரவு",
       "little_none": "மிகக் குறைவு அல்லது ஆதரவு இல்லை",
-      "home_nursing": "Home nursing",
-      "home_medical": "Home medical",
-      "home_palliative": "Home palliative care",
-      "day_hospice": "Day hospice care",
-      "centre_care": "Day care, rehabilitation, or centre-based care",
-      "nursing_home_hospice": "Nursing home or inpatient hospice",
-      "mental_health": "Mental health support",
-      "acp": "Advance Care Planning (ACP)",
-      "family_caregiver_training": "Family caregiver wants training",
-      "mdw_caregiver_training": "Domestic helper wants training",
-      "no_training_needed": "No caregiver training needed",
-      "have_mdw_same_home": "Have MDW living at same address",
-      "planning_mdw": "Planning to hire MDW",
-      "no_mdw": "No MDW",
+      "home_nursing": "வீட்டு நர்சிங்",
+      "home_medical": "வீட்டு மருத்துவ சேவை",
+      "home_palliative": "வீட்டு பல்லியேட்டிவ் பராமரிப்பு",
+      "day_hospice": "பகல் ஹாஸ்பிஸ் பராமரிப்பு",
+      "centre_care": "பகல் பராமரிப்பு, மறுவாழ்வு, அல்லது மைய அடிப்படையிலான பராமரிப்பு",
+      "nursing_home_hospice": "நர்சிங் ஹோம் அல்லது உள்நோயாளர் ஹாஸ்பிஸ்",
+      "mental_health": "மனநல ஆதரவு",
+      "acp": "முன்கூட்டிய பராமரிப்பு திட்டமிடல் (ACP)",
+      "family_caregiver_training": "குடும்ப பராமரிப்பாளர் பயிற்சி விரும்புகிறார்",
+      "mdw_caregiver_training": "வீட்டு உதவியாளர் பயிற்சி விரும்புகிறார்",
+      "no_training_needed": "பராமரிப்பாளர் பயிற்சி தேவையில்லை",
+      "have_mdw_same_home": "அதே முகவரியில் வசிக்கும் MDW உள்ளது",
+      "planning_mdw": "MDW நியமிக்க திட்டமிடுகிறேன்",
+      "no_mdw": "MDW இல்லை",
       "careshield_life_policy": "CareShield Life",
       "eldershield_policy": "ElderShield",
-      "no_ltc_policy": "No CareShield Life or ElderShield",
-      "medisave_5000_plus": "Yes, $5,000 or more",
-      "medisave_under_5000": "No, below $5,000",
-      "medisave_not_sure": "Not sure",
-      "no_care_services": "No care services needed now"
+      "no_ltc_policy": "CareShield Life அல்லது ElderShield இல்லை",
+      "medisave_5000_plus": "ஆம், $5,000 அல்லது அதற்கு மேல்",
+      "medisave_under_5000": "இல்லை, $5,000 க்குக் குறைவாக",
+      "medisave_not_sure": "தெரியவில்லை",
+      "no_care_services": "இப்போது பராமரிப்பு சேவைகள் தேவையில்லை"
     },
     "status": {
       "likely": "தகுதி இருக்கலாம்",
@@ -1798,7 +1798,7 @@
       "mdwEmployerCheck": "This requires an MDW employer and care recipient living at the same address.",
       "idapeAgeCoverage": "IDAPE is for older Citizens who could not benefit from ElderShield because of age or pre-existing disability.",
       "policyholderCheck": "Coverage or policyholder status must be checked through CPF, insurer, or Singpass.",
-      "careServices": "AIC lists home, centre, clinic, nursing home, hospice, mental health, and ACP care services."
+      "careServices": "AIC வீடு, மையம், கிளினிக், நர்சிங் ஹோம், ஹாஸ்பிஸ், மனநலம், மற்றும் ACP பராமரிப்பு சேவைகளை பட்டியலிடுகிறது."
     },
     "schemes": {
       "sgo_aac": {
