@@ -94,6 +94,84 @@
     care_services: { mode: "call", checks: ["needSummary", "homeArea"] },
     sg60_vouchers: { mode: "check", checks: ["singpass", "claimDate"] }
   };
+  const abbreviationExpansions = {
+    en: {
+      AIC: "Agency for Integrated Care (AIC)",
+      SGO: "Silver Generation Office (SGO)",
+      IRAS: "Inland Revenue Authority of Singapore (IRAS)",
+      CPF: "Central Provident Fund (CPF)",
+      HDB: "Housing & Development Board (HDB)",
+      CHAS: "Community Health Assist Scheme (CHAS)",
+      MSF: "Ministry of Social and Family Development (MSF)",
+      MOH: "Ministry of Health (MOH)",
+      ACP: "Advance Care Planning (ACP)",
+      MDW: "migrant domestic worker (MDW)",
+      MOM: "Ministry of Manpower (MOM)",
+      SMF: "Seniors' Mobility and Enabling Fund (SMF)",
+      IDAPE: "Interim Disability Assistance Programme for the Elderly (IDAPE)",
+      NRIC: "National Registration Identity Card (NRIC)",
+      PR: "Permanent Resident (PR)",
+      GP: "general practitioner (GP)",
+      SG60: "Singapore's 60th anniversary (SG60)"
+    },
+    zh: {
+      AIC: "护联中心（AIC）",
+      SGO: "乐龄大使办事处（SGO）",
+      IRAS: "国内税务局（IRAS）",
+      CPF: "中央公积金（CPF）",
+      HDB: "建屋发展局组屋（HDB）",
+      CHAS: "社保援助计划（CHAS）",
+      MSF: "社会及家庭发展部（MSF）",
+      MOH: "卫生部（MOH）",
+      ACP: "预先护理计划（ACP）",
+      MDW: "外籍家庭帮佣（MDW）",
+      MOM: "人力部（MOM）",
+      SMF: "乐龄助行及赋能基金（SMF）",
+      IDAPE: "乐龄临时伤残援助计划（IDAPE）",
+      NRIC: "国民身份证（NRIC）",
+      PR: "永久居民（PR）",
+      GP: "家庭医生（GP）",
+      SG60: "新加坡建国60周年（SG60）"
+    },
+    ms: {
+      AIC: "Agency for Integrated Care (AIC)",
+      SGO: "Pejabat Generasi Perak (SGO)",
+      IRAS: "Lembaga Hasil Dalam Negeri Singapura (IRAS)",
+      CPF: "Central Provident Fund (CPF)",
+      HDB: "Lembaga Perumahan dan Pembangunan (HDB)",
+      CHAS: "Skim Bantuan Kesihatan Masyarakat (CHAS)",
+      MSF: "Kementerian Pembangunan Sosial dan Keluarga (MSF)",
+      MOH: "Kementerian Kesihatan (MOH)",
+      ACP: "Perancangan Jagaan Awal (ACP)",
+      MDW: "pekerja domestik migran (MDW)",
+      MOM: "Kementerian Tenaga Manusia (MOM)",
+      SMF: "Seniors' Mobility and Enabling Fund (SMF)",
+      IDAPE: "Program Bantuan Hilang Upaya Interim untuk Warga Emas (IDAPE)",
+      NRIC: "Kad Pengenalan Pendaftaran Negara (NRIC)",
+      PR: "Penduduk Tetap (PR)",
+      GP: "doktor am (GP)",
+      SG60: "ulang tahun ke-60 Singapura (SG60)"
+    },
+    ta: {
+      AIC: "பராமரிப்பு ஒருங்கிணைப்பு நிறுவனம் (AIC)",
+      SGO: "சில்வர் ஜெனரேஷன் அலுவலகம் (SGO)",
+      IRAS: "சிங்கப்பூர் உள்நாட்டு வரித்துறை (IRAS)",
+      CPF: "மத்திய சேமநிதி (CPF)",
+      HDB: "வீடமைப்பு வளர்ச்சி வாரியம் (HDB)",
+      CHAS: "சமூக சுகாதார உதவி திட்டம் (CHAS)",
+      MSF: "சமூக மற்றும் குடும்ப மேம்பாட்டு அமைச்சகம் (MSF)",
+      MOH: "சுகாதார அமைச்சகம் (MOH)",
+      ACP: "முன்கூட்டிய பராமரிப்பு திட்டமிடல் (ACP)",
+      MDW: "குடியேற்ற வீட்டு பணியாளர் (MDW)",
+      MOM: "மனிதவள அமைச்சகம் (MOM)",
+      SMF: "மூத்தோருக்கான நகர்வு மற்றும் ஆதரவு நிதி (SMF)",
+      IDAPE: "மூத்தோருக்கான இடைக்கால இயலாமை உதவி திட்டம் (IDAPE)",
+      NRIC: "தேசிய பதிவு அடையாள அட்டை (NRIC)",
+      PR: "நிரந்தர குடியிருப்பாளர் (PR)",
+      GP: "பொது மருத்துவர் (GP)",
+      SG60: "சிங்கப்பூரின் 60வது ஆண்டு (SG60)"
+    }
+  };
 
   const state = {
     lang: null,
@@ -159,7 +237,23 @@
   ];
 
   function t(path) {
-    return path.split(".").reduce((node, key) => node?.[key], i18n[state.lang || "en"]) || path;
+    const value = path.split(".").reduce((node, key) => node?.[key], i18n[state.lang || "en"]);
+    return typeof value === "string" ? expandAbbreviations(value) : value || path;
+  }
+
+  function escapeRegExp(value) {
+    return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function expandAbbreviations(text) {
+    const lang = state.lang || "en";
+    const expansions = abbreviationExpansions[lang] || abbreviationExpansions.en;
+    return Object.entries(expansions)
+      .sort((a, b) => b[0].length - a[0].length)
+      .reduce((result, [abbreviation, expanded]) => {
+        if (result.includes(expanded)) return result;
+        return result.replace(new RegExp(`\\b${escapeRegExp(abbreviation)}\\b`, "g"), expanded);
+      }, text);
   }
 
   function questionList() {
