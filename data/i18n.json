@@ -901,19 +901,19 @@
         ]
       },
       "smf_home_items": {
-        "title": "SMF - Home Healthcare Items",
-        "summary": "Subsidies for essential healthcare items such as adult diapers, milk feeds, catheters, wound dressings, nasal tubing, and related supplies for eligible seniors receiving home or hospice care.",
-        "next": "Ask the home nursing, home medical, home palliative, or day hospice provider to help apply before buying items.",
+        "title": "乐龄助行及赋能基金（SMF）- 居家医疗用品",
+        "summary": "为接受居家护理或临终关怀的合格年长者，津贴成人纸尿片、营养奶、导尿管、伤口敷料、鼻管和相关必要医疗用品。",
+        "next": "购买用品前，请居家护理、居家医疗、居家临终护理或日间临终关怀服务提供者协助申请。",
         "tags": [
-          "Healthcare items"
+          "医疗用品"
         ]
       },
       "caregiver_training": {
-        "title": "Caregivers Training Grant",
-        "summary": "Subsidises approved caregiving courses so family members or domestic helpers can learn skills to care for an eligible senior or person with disability.",
-        "next": "Choose an approved course, contact the training provider, and tell them you want to use CTG before course registration.",
+        "title": "照护者培训津贴",
+        "summary": "津贴认可的照护课程，让家人或家庭帮佣学习照护合格年长者或残障人士的技能。",
+        "next": "先选择认可课程，联系培训机构，并在报名课程前告知要使用照护者培训津贴（CTG）。",
         "tags": [
-          "Caregiving"
+          "照护"
         ]
       },
       "mdw_levy": {
@@ -921,39 +921,39 @@
         "summary": "如果家庭聘请外籍家庭帮佣照顾在日常活动上需要协助的残障人士，可支付较低的每月劳工税。",
         "next": "先取得人力部（MOM）批准聘请外籍家庭帮佣（MDW），再通过AIC eFASS或AIC Link申请。",
         "tags": [
-          "Caregiving"
+          "照护"
         ]
       },
       "pioneer_das": {
-        "title": "Pioneer Generation Disability Assistance Scheme (PioneerDAS)",
-        "summary": "Monthly cash support for Pioneer Generation members with disability to help with long-term care costs and daily expenses.",
-        "next": "Check Pioneer status, arrange disability assessment if needed, then apply through AIC eFASS or AIC Link.",
+        "title": "建国一代残障援助计划（PioneerDAS）",
+        "summary": "为有残障的建国一代成员提供每月现金援助，帮助支付长期护理费用和日常开销。",
+        "next": "先确认建国一代身份，必要时安排残障评估，然后通过AIC eFASS或AIC Link申请。",
         "tags": [
-          "Disability"
+          "残障"
         ]
       },
       "idape": {
-        "title": "Interim Disability Assistance Programme for the Elderly (IDAPE)",
-        "summary": "Monthly cash payouts for older Singapore Citizens with severe disability who could not benefit from ElderShield because of age or pre-existing disability.",
-        "next": "Check age, income, coverage, and severe-disability assessment requirements, then apply through AIC eFASS or AIC Link.",
+        "title": "乐龄临时伤残援助计划（IDAPE）",
+        "summary": "为因年龄或原有残障而无法从ElderShield受益、且有严重残障的较年长新加坡公民提供每月现金援助。",
+        "next": "确认年龄、收入、保险覆盖和严重残障评估要求，然后通过AIC eFASS或AIC Link申请。",
         "tags": [
-          "Disability"
+          "残障"
         ]
       },
       "careshield_life": {
-        "title": "CareShield Life claims",
-        "summary": "Monthly cash payouts for CareShield Life policyholders who become severely disabled and need long-term care.",
-        "next": "Check policy status through CPF/Singpass, complete severe-disability assessment, then submit claim through AIC eFASS.",
+        "title": "CareShield Life索赔",
+        "summary": "为成为严重残障并需要长期护理的CareShield Life保单持有人提供每月现金赔付。",
+        "next": "通过公积金或Singpass确认保单状态，完成严重残障评估，然后通过AIC eFASS提交索赔。",
         "tags": [
-          "Disability insurance"
+          "残障保险"
         ]
       },
       "eldershield": {
-        "title": "ElderShield claims",
-        "summary": "Monthly cash payouts for ElderShield policyholders who become severely disabled. ElderShield no longer accepts new sign-ups but existing policyholders can claim.",
-        "next": "Check ElderShield policy status through CPF/Singpass or insurer, complete severe-disability assessment, then submit claim through AIC eFASS.",
+        "title": "ElderShield索赔",
+        "summary": "为成为严重残障的ElderShield保单持有人提供每月现金赔付。ElderShield已不接受新加入，但现有保单持有人仍可索赔。",
+        "next": "通过公积金、Singpass或保险公司确认ElderShield保单状态，完成严重残障评估，然后通过AIC eFASS提交索赔。",
         "tags": [
-          "Disability insurance"
+          "残障保险"
         ]
       },
       "care_services": {
@@ -961,7 +961,7 @@
         "summary": "AIC护理服务帮助年长者和照护者寻找居家护理、中心或诊所护理、疗养院或临终关怀、心理健康服务，以及预先护理计划。",
         "next": "致电AIC或浏览AIC护理服务，寻找住家附近合适的服务。",
         "tags": [
-          "Care services"
+          "护理服务"
         ]
       }
     },
@@ -1346,7 +1346,7 @@
         ]
       },
       "majulah_earn_save": {
-        "title": "Pakej Majulah - Bonus Earn and Save",
+        "title": "Pakej Majulah - Bonus Bekerja dan Menyimpan",
         "summary": "Bonus CPF untuk Warganegara bekerja lahir pada 1973 atau lebih awal yang memenuhi syarat pendapatan, Nilai Tahunan, dan hartanah.",
         "next": "Semak kelayakan tahunan melalui govbenefits atau CPF.",
         "tags": [
@@ -1418,19 +1418,19 @@
         ]
       },
       "smf_home_items": {
-        "title": "SMF - Home Healthcare Items",
-        "summary": "Subsidies for essential healthcare items such as adult diapers, milk feeds, catheters, wound dressings, nasal tubing, and related supplies for eligible seniors receiving home or hospice care.",
-        "next": "Ask the home nursing, home medical, home palliative, or day hospice provider to help apply before buying items.",
+        "title": "Dana Mobiliti dan Pemboleh Warga Emas (SMF) - Barangan Penjagaan Kesihatan Rumah",
+        "summary": "Subsidi untuk barangan kesihatan penting seperti lampin dewasa, susu makanan, kateter, pembalut luka, tiub hidung, dan bekalan berkaitan untuk warga emas layak yang menerima jagaan rumah atau hospis.",
+        "next": "Minta penyedia kejururawatan rumah, perubatan rumah, paliatif rumah, atau hospis harian membantu memohon sebelum membeli barangan.",
         "tags": [
-          "Healthcare items"
+          "Barangan kesihatan"
         ]
       },
       "caregiver_training": {
-        "title": "Caregivers Training Grant",
-        "summary": "Subsidises approved caregiving courses so family members or domestic helpers can learn skills to care for an eligible senior or person with disability.",
-        "next": "Choose an approved course, contact the training provider, and tell them you want to use CTG before course registration.",
+        "title": "Geran Latihan Penjaga",
+        "summary": "Mensubsidi kursus penjagaan yang diluluskan supaya ahli keluarga atau pembantu rumah boleh mempelajari kemahiran menjaga warga emas layak atau orang kurang upaya.",
+        "next": "Pilih kursus yang diluluskan, hubungi penyedia latihan, dan beritahu mereka anda mahu menggunakan Geran Latihan Penjaga (CTG) sebelum pendaftaran kursus.",
         "tags": [
-          "Caregiving"
+          "Penjagaan"
         ]
       },
       "mdw_levy": {
@@ -1438,39 +1438,39 @@
         "summary": "Levi bulanan yang lebih rendah untuk isi rumah yang menggaji pekerja domestik migran bagi menjaga orang kurang upaya yang perlukan bantuan dalam aktiviti harian.",
         "next": "Dapatkan kelulusan Kementerian Tenaga Manusia (MOM) untuk menggaji pekerja domestik migran (MDW) dahulu, kemudian mohon melalui AIC eFASS atau AIC Link.",
         "tags": [
-          "Caregiving"
+          "Penjagaan"
         ]
       },
       "pioneer_das": {
-        "title": "Pioneer Generation Disability Assistance Scheme (PioneerDAS)",
-        "summary": "Monthly cash support for Pioneer Generation members with disability to help with long-term care costs and daily expenses.",
-        "next": "Check Pioneer status, arrange disability assessment if needed, then apply through AIC eFASS or AIC Link.",
+        "title": "Skim Bantuan Hilang Upaya Generasi Pioneer (PioneerDAS)",
+        "summary": "Sokongan tunai bulanan untuk ahli Generasi Pioneer yang mempunyai kurang upaya bagi membantu kos jagaan jangka panjang dan perbelanjaan harian.",
+        "next": "Semak status Pioneer, atur penilaian kurang upaya jika perlu, kemudian mohon melalui AIC eFASS atau AIC Link.",
         "tags": [
-          "Disability"
+          "Kurang upaya"
         ]
       },
       "idape": {
-        "title": "Interim Disability Assistance Programme for the Elderly (IDAPE)",
-        "summary": "Monthly cash payouts for older Singapore Citizens with severe disability who could not benefit from ElderShield because of age or pre-existing disability.",
-        "next": "Check age, income, coverage, and severe-disability assessment requirements, then apply through AIC eFASS or AIC Link.",
+        "title": "Program Bantuan Hilang Upaya Interim untuk Warga Emas (IDAPE)",
+        "summary": "Bayaran tunai bulanan untuk Warganegara Singapura lebih tua dengan kurang upaya teruk yang tidak dapat menerima manfaat ElderShield kerana umur atau kurang upaya sedia ada.",
+        "next": "Semak umur, pendapatan, perlindungan, dan syarat penilaian kurang upaya teruk, kemudian mohon melalui AIC eFASS atau AIC Link.",
         "tags": [
-          "Disability"
+          "Kurang upaya"
         ]
       },
       "careshield_life": {
-        "title": "CareShield Life claims",
-        "summary": "Monthly cash payouts for CareShield Life policyholders who become severely disabled and need long-term care.",
-        "next": "Check policy status through CPF/Singpass, complete severe-disability assessment, then submit claim through AIC eFASS.",
+        "title": "Tuntutan CareShield Life",
+        "summary": "Bayaran tunai bulanan untuk pemegang polisi CareShield Life yang menjadi kurang upaya teruk dan memerlukan jagaan jangka panjang.",
+        "next": "Semak status polisi melalui CPF/Singpass, lengkapkan penilaian kurang upaya teruk, kemudian hantar tuntutan melalui AIC eFASS.",
         "tags": [
-          "Disability insurance"
+          "Insurans kurang upaya"
         ]
       },
       "eldershield": {
-        "title": "ElderShield claims",
-        "summary": "Monthly cash payouts for ElderShield policyholders who become severely disabled. ElderShield no longer accepts new sign-ups but existing policyholders can claim.",
-        "next": "Check ElderShield policy status through CPF/Singpass or insurer, complete severe-disability assessment, then submit claim through AIC eFASS.",
+        "title": "Tuntutan ElderShield",
+        "summary": "Bayaran tunai bulanan untuk pemegang polisi ElderShield yang menjadi kurang upaya teruk. ElderShield tidak lagi menerima pendaftaran baharu, tetapi pemegang polisi sedia ada boleh membuat tuntutan.",
+        "next": "Semak status polisi ElderShield melalui CPF/Singpass atau syarikat insurans, lengkapkan penilaian kurang upaya teruk, kemudian hantar tuntutan melalui AIC eFASS.",
         "tags": [
-          "Disability insurance"
+          "Insurans kurang upaya"
         ]
       },
       "care_services": {
@@ -1478,7 +1478,7 @@
         "summary": "Perkhidmatan jagaan AIC membantu warga emas dan penjaga mencari jagaan di rumah, jagaan pusat atau klinik, rumah jagaan atau hospis, perkhidmatan kesihatan mental, dan Perancangan Jagaan Awal.",
         "next": "Hubungi AIC atau lawati perkhidmatan jagaan AIC untuk mencari perkhidmatan yang sesuai berhampiran rumah.",
         "tags": [
-          "Care services"
+          "Perkhidmatan jagaan"
         ]
       }
     },
@@ -1635,7 +1635,7 @@
       },
       "cpf55": {
         "title": "55 வயதுக்குள் உங்கள் மொத்த CPF பங்களிப்பு சுமார் $140,000 அல்லது அதற்குக் குறைவா?",
-        "hint": "இது Silver Support தகுதியை மதிப்பிட உதவும்."
+        "hint": "இது சில்வர் சப்போர்ட் தகுதியை மதிப்பிட உதவும்."
       },
       "healthNeeds": {
         "title": "எந்த சுகாதார அல்லது பராமரிப்பு தேவைகள் பொருந்தும்?",
@@ -1806,16 +1806,16 @@
     },
     "schemes": {
       "sgo_aac": {
-        "title": "Silver Generation Office / Active Ageing Centre ஆதரவு",
+        "title": "சில்வர் ஜெனரேஷன் அலுவலகம் / செயற்பாட்டான முதுமை மைய ஆதரவு",
         "summary": "SGO மூத்தோர் பராமரிப்பு தேவைகள், திட்ட இணைப்பு, சமூக ஆதரவு ஆகியவற்றை புரிந்து கொள்ள உதவும்.",
-        "next": "SGO/AIC அல்லது அருகிலுள்ள Active Ageing Centre தொடர்பு கொள்ளவும்.",
+        "next": "SGO/AIC அல்லது அருகிலுள்ள செயற்பாட்டான முதுமை மையத்தைத் தொடர்பு கொள்ளவும்.",
         "tags": [
           "வெளிச்சேவை",
           "சமூகம்"
         ]
       },
       "senior_concession": {
-        "title": "Senior Citizen Concession Card",
+        "title": "மூத்த குடிமக்கள் சலுகை அட்டை",
         "summary": "60 வயது மற்றும் மேற்பட்ட தகுதியுள்ள குடிமக்கள் மற்றும் PR க்கு பொதுப் போக்குவரத்து சலுகை.",
         "next": "தகுதி வந்ததும் TransitLink மூலம் விண்ணப்பிக்கவும்.",
         "tags": [
@@ -1831,7 +1831,7 @@
         ]
       },
       "gstv_medisave": {
-        "title": "GST Voucher - MediSave",
+        "title": "GST வவுச்சர் - MediSave",
         "summary": "65+ தகுதியுள்ள குடிமக்களுக்கு ஆண்டு MediSave நிரப்பு; ஆண்டு மதிப்பு மற்றும் சொத்து விதிகள் உள்ளன.",
         "next": "Singpass மூலம் govbenefits இல் பார்க்கவும்.",
         "tags": [
@@ -1839,7 +1839,7 @@
         ]
       },
       "silver_support": {
-        "title": "Silver Support Scheme",
+        "title": "சில்வர் சப்போர்ட் திட்டம்",
         "summary": "வேலை ஆண்டுகளில் குறைந்த வருமானம், இப்போது குறைந்த குடும்ப ஆதரவு உள்ள மூத்தோருக்கு காலாண்டு பண உதவி.",
         "next": "பொதுவாக விண்ணப்பம் தேவையில்லை; CPF Board தகுதியுள்ளவர்களுக்கு அறிவிக்கும்.",
         "tags": [
@@ -1847,7 +1847,7 @@
         ]
       },
       "pioneer": {
-        "title": "Pioneer Generation Package",
+        "title": "பயோனியர் தலைமுறை தொகுப்பு",
         "summary": "1949 அல்லது அதற்கு முன் பிறந்து குடிமகன் தேதி விதி பூர்த்தி செய்தவர்களுக்கு சுகாதார நன்மைகள்.",
         "next": "MOH அல்லது govbenefits மூலம் தகுதி பார்க்கவும்.",
         "tags": [
@@ -1855,7 +1855,7 @@
         ]
       },
       "merdeka": {
-        "title": "Merdeka Generation Package",
+        "title": "மெர்டேகா தலைமுறை தொகுப்பு",
         "summary": "1950 முதல் 1959 வரை பிறந்து குடிமகன் தேதி விதி பூர்த்தி செய்தவர்களுக்கு சுகாதார நன்மைகள்.",
         "next": "MOH அல்லது govbenefits மூலம் தகுதி பார்க்கவும்.",
         "tags": [
@@ -1863,7 +1863,7 @@
         ]
       },
       "majulah_earn_save": {
-        "title": "Majulah Package - Earn and Save Bonus",
+        "title": "மஜூலா தொகுப்பு - வேலை செய்து சேமிக்கும் போனஸ்",
         "summary": "1973 அல்லது அதற்கு முன் பிறந்த தகுதியுள்ள வேலை செய்கிற குடிமக்களுக்கு CPF போனஸ்; வருமானம், ஆண்டு மதிப்பு, சொத்து விதிகள் உள்ளன.",
         "next": "govbenefits அல்லது CPF மூலம் ஆண்டு தகுதி பார்க்கவும்.",
         "tags": [
@@ -1871,7 +1871,7 @@
         ]
       },
       "workfare": {
-        "title": "Workfare Income Supplement",
+        "title": "வேலைவருமான துணை உதவி",
         "summary": "வருமானம், சொத்து, வேலை விதிகள் பூர்த்தி செய்யும் குறைந்த ஊதிய வயதான சிங்கப்பூர் வேலைக்காரர்களுக்கு CPF மற்றும் பண ஆதரவு.",
         "next": "ஊழியர்கள் தானாக மதிப்பிடப்படுவர்; சுயதொழிலாளர்கள் வருமானம் அறிவித்து MediSave செலுத்த வேண்டும்.",
         "tags": [
@@ -1887,7 +1887,7 @@
         ]
       },
       "home_caregiving": {
-        "title": "Home Caregiving Grant",
+        "title": "வீட்டு பராமரிப்பு மானியம்",
         "summary": "நிலையான நடுத்தர இயலாமை மற்றும் அன்றாட உதவி தேவைப்படுவோருக்கு மாதாந்திர பண ஆதரவு; வருமானச் சோதனை உண்டு.",
         "next": "இயலாமை மதிப்பீடு செய்து AIC மூலம் விண்ணப்பிக்கவும்.",
         "tags": [
@@ -1895,7 +1895,7 @@
         ]
       },
       "smf": {
-        "title": "Seniors' Mobility and Enabling Fund",
+        "title": "மூத்தோருக்கான நகர்வு மற்றும் ஆதரவு நிதி",
         "summary": "தகுதியுள்ள மூத்தோருக்கு உதவி சாதனங்கள், வீட்டு சுகாதார பொருட்கள், போக்குவரத்து சலுகைகள்.",
         "next": "AIC நியமித்த மதிப்பீட்டாளர் அல்லது பராமரிப்பு வழங்குநர் மூலம் விண்ணப்பிக்கவும்.",
         "tags": [
@@ -1927,27 +1927,27 @@
         ]
       },
       "sg60_vouchers": {
-        "title": "SG60 Vouchers",
-        "summary": "SG60 காலத்தில் சிங்கப்பூர் குடிமக்களுக்கு வவுச்சர்கள். வயது மற்றும் குடிமகன் விதிகள் பூர்த்தி செய்த மூத்தோர் senior தொகை பெறுவர்.",
+        "title": "SG60 வவுச்சர்கள்",
+        "summary": "SG60 காலத்தில் சிங்கப்பூர் குடிமக்களுக்கு வவுச்சர்கள் வழங்கப்படும். வயது மற்றும் குடிமகன் விதிகளை பூர்த்தி செய்த மூத்தோர் மூத்தோர் தொகையைப் பெறுவர்.",
         "next": "govbenefits இல் கோருதல் மற்றும் பயன்படுத்தும் தேதிகளைப் பார்க்கவும்.",
         "tags": [
           "வவுச்சர்"
         ]
       },
       "smf_home_items": {
-        "title": "SMF - Home Healthcare Items",
-        "summary": "Subsidies for essential healthcare items such as adult diapers, milk feeds, catheters, wound dressings, nasal tubing, and related supplies for eligible seniors receiving home or hospice care.",
-        "next": "Ask the home nursing, home medical, home palliative, or day hospice provider to help apply before buying items.",
+        "title": "மூத்தோருக்கான நகர்வு மற்றும் ஆதரவு நிதி (SMF) - வீட்டு சுகாதார பொருட்கள்",
+        "summary": "வீட்டு அல்லது ஹாஸ்பிஸ் பராமரிப்பு பெறும் தகுதியுள்ள மூத்தோருக்கு வயது வந்தோருக்கான டயப்பர்கள், ஊட்டச்சத்து பால், கேத்தெட்டர்கள், காய கட்டுப்பொருட்கள், மூக்கு குழாய், மற்றும் தொடர்புடைய அத்தியாவசிய சுகாதார பொருட்களுக்கு மானியம்.",
+        "next": "பொருட்கள் வாங்குவதற்கு முன் வீட்டு நர்சிங், வீட்டு மருத்துவம், வீட்டு பல்லியேட்டிவ், அல்லது பகல் ஹாஸ்பிஸ் வழங்குநரிடம் விண்ணப்ப உதவி கேளுங்கள்.",
         "tags": [
-          "Healthcare items"
+          "சுகாதார பொருட்கள்"
         ]
       },
       "caregiver_training": {
-        "title": "Caregivers Training Grant",
-        "summary": "Subsidises approved caregiving courses so family members or domestic helpers can learn skills to care for an eligible senior or person with disability.",
-        "next": "Choose an approved course, contact the training provider, and tell them you want to use CTG before course registration.",
+        "title": "பராமரிப்பாளர் பயிற்சி மானியம்",
+        "summary": "குடும்பத்தினர் அல்லது வீட்டு உதவியாளர்கள் தகுதியுள்ள மூத்தோர் அல்லது இயலாமை உள்ளவரைப் பராமரிக்கும் திறன்களை கற்க அங்கீகரிக்கப்பட்ட பராமரிப்பு பாடங்களுக்கு மானியம் வழங்கும்.",
+        "next": "அங்கீகரிக்கப்பட்ட பாடத்தைத் தேர்ந்தெடுத்து, பயிற்சி வழங்குநரைத் தொடர்பு கொண்டு, பாடப் பதிவு முன் பராமரிப்பாளர் பயிற்சி மானியம் (CTG) பயன்படுத்த விரும்புவதாகச் சொல்லுங்கள்.",
         "tags": [
-          "Caregiving"
+          "பராமரிப்பு"
         ]
       },
       "mdw_levy": {
@@ -1955,39 +1955,39 @@
         "summary": "அன்றாட செயல்களில் உதவி தேவைப்படும் இயலாமை உள்ளவரைப் பராமரிக்க குடியேற்ற வீட்டு பணியாளரை நியமிக்கும் குடும்பங்களுக்கு குறைந்த மாதாந்திர லெவி.",
         "next": "முதலில் மனிதவள அமைச்சகம் (MOM) மூலம் குடியேற்ற வீட்டு பணியாளர் (MDW) நியமிப்பு அனுமதி பெறுங்கள்; பிறகு AIC eFASS அல்லது AIC Link மூலம் விண்ணப்பிக்கவும்.",
         "tags": [
-          "Caregiving"
+          "பராமரிப்பு"
         ]
       },
       "pioneer_das": {
-        "title": "Pioneer Generation Disability Assistance Scheme (PioneerDAS)",
-        "summary": "Monthly cash support for Pioneer Generation members with disability to help with long-term care costs and daily expenses.",
-        "next": "Check Pioneer status, arrange disability assessment if needed, then apply through AIC eFASS or AIC Link.",
+        "title": "பயோனியர் தலைமுறை இயலாமை உதவி திட்டம் (PioneerDAS)",
+        "summary": "இயலாமை உள்ள பயோனியர் தலைமுறை உறுப்பினர்களுக்கு நீண்டகால பராமரிப்பு செலவுகள் மற்றும் அன்றாட செலவுகளுக்கு உதவும் மாதாந்திர பண ஆதரவு.",
+        "next": "பயோனியர் நிலையைச் சரிபார்த்து, தேவையெனில் இயலாமை மதிப்பீடு செய்து, பிறகு AIC eFASS அல்லது AIC Link மூலம் விண்ணப்பிக்கவும்.",
         "tags": [
-          "Disability"
+          "இயலாமை"
         ]
       },
       "idape": {
-        "title": "Interim Disability Assistance Programme for the Elderly (IDAPE)",
-        "summary": "Monthly cash payouts for older Singapore Citizens with severe disability who could not benefit from ElderShield because of age or pre-existing disability.",
-        "next": "Check age, income, coverage, and severe-disability assessment requirements, then apply through AIC eFASS or AIC Link.",
+        "title": "மூத்தோருக்கான இடைக்கால இயலாமை உதவி திட்டம் (IDAPE)",
+        "summary": "வயது அல்லது முன்பிருந்த இயலாமை காரணமாக ElderShield பயன் பெற முடியாத, கடுமையான இயலாமை கொண்ட வயதான சிங்கப்பூர் குடிமக்களுக்கு மாதாந்திர பண உதவி.",
+        "next": "வயது, வருமானம், காப்பீடு, மற்றும் கடுமையான இயலாமை மதிப்பீட்டு தேவைகளைச் சரிபார்த்து, பிறகு AIC eFASS அல்லது AIC Link மூலம் விண்ணப்பிக்கவும்.",
         "tags": [
-          "Disability"
+          "இயலாமை"
         ]
       },
       "careshield_life": {
-        "title": "CareShield Life claims",
-        "summary": "Monthly cash payouts for CareShield Life policyholders who become severely disabled and need long-term care.",
-        "next": "Check policy status through CPF/Singpass, complete severe-disability assessment, then submit claim through AIC eFASS.",
+        "title": "CareShield Life கோரிக்கைகள்",
+        "summary": "கடுமையான இயலாமை ஏற்பட்டு நீண்டகால பராமரிப்பு தேவைப்படும் CareShield Life பாலிசிதாரர்களுக்கு மாதாந்திர பண வழங்கல்.",
+        "next": "CPF/Singpass மூலம் பாலிசி நிலையைச் சரிபார்த்து, கடுமையான இயலாமை மதிப்பீட்டை முடித்து, பிறகு AIC eFASS மூலம் கோரிக்கை சமர்ப்பிக்கவும்.",
         "tags": [
-          "Disability insurance"
+          "இயலாமை காப்பீடு"
         ]
       },
       "eldershield": {
-        "title": "ElderShield claims",
-        "summary": "Monthly cash payouts for ElderShield policyholders who become severely disabled. ElderShield no longer accepts new sign-ups but existing policyholders can claim.",
-        "next": "Check ElderShield policy status through CPF/Singpass or insurer, complete severe-disability assessment, then submit claim through AIC eFASS.",
+        "title": "ElderShield கோரிக்கைகள்",
+        "summary": "கடுமையான இயலாமை ஏற்படும் ElderShield பாலிசிதாரர்களுக்கு மாதாந்திர பண வழங்கல். ElderShield புதிய சேர்க்கைகளை இனி ஏற்காது; ஆனால் ஏற்கனவே உள்ள பாலிசிதாரர்கள் கோரிக்கை செய்யலாம்.",
+        "next": "CPF/Singpass அல்லது காப்பீட்டாளர் மூலம் ElderShield பாலிசி நிலையைச் சரிபார்த்து, கடுமையான இயலாமை மதிப்பீட்டை முடித்து, பிறகு AIC eFASS மூலம் கோரிக்கை சமர்ப்பிக்கவும்.",
         "tags": [
-          "Disability insurance"
+          "இயலாமை காப்பீடு"
         ]
       },
       "care_services": {
@@ -1995,7 +1995,7 @@
         "summary": "AIC பராமரிப்பு சேவைகள் மூத்தோர் மற்றும் பராமரிப்பாளர்கள் வீட்டு பராமரிப்பு, மையம் அல்லது கிளினிக் பராமரிப்பு, நர்சிங் ஹோம் அல்லது ஹாஸ்பிஸ் பராமரிப்பு, மனநலம் சேவைகள், மற்றும் முன்கூட்டிய பராமரிப்பு திட்டமிடலைக் கண்டுபிடிக்க உதவும்.",
         "next": "AIC ஐ அழைக்கவும் அல்லது AIC பராமரிப்பு சேவைகள் தளத்தைப் பார்வையிட்டு வீட்டருகே பொருத்தமான சேவைகளைத் தேடவும்.",
         "tags": [
-          "Care services"
+          "பராமரிப்பு சேவைகள்"
         ]
       }
     },
