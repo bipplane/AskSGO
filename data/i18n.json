@@ -107,7 +107,7 @@
         "hint": "Choose the closest match."
       },
       "mdwCare": {
-        "title": "Do you have or plan to hire a migrant domestic worker for care?",
+        "title": "Do you have or plan to hire a migrant domestic worker (MDW) for care?",
         "hint": "This helps check MDW levy concession."
       },
       "ltcCoverage": {
@@ -761,13 +761,13 @@
       "severeDisability": "您选择了严重残障，通常指3项或以上日常活动需帮助。",
       "chronic": "您选择了慢性病护理需要。",
       "preventiveCare": "即使没有慢性病，预防保健和Healthier SG也可能有帮助。",
-      "meansTest": "This scheme uses household income, Annual Value, or other means-test checks.",
-      "providerApply": "Application usually goes through an AIC-linked care provider or service provider.",
-      "age65OrDisability": "The care recipient is aged 65+ or has disability/care needs.",
-      "caregiverCourse": "A main caregiver must choose and complete an approved caregiver training course.",
-      "mdwEmployerCheck": "This requires an MDW employer and care recipient living at the same address.",
-      "idapeAgeCoverage": "IDAPE is for older Citizens who could not benefit from ElderShield because of age or pre-existing disability.",
-      "policyholderCheck": "Coverage or policyholder status must be checked through CPF, insurer, or Singpass.",
+      "meansTest": "此计划会看家庭人均收入、住家年值或其他经济审查条件。",
+      "providerApply": "通常需要通过AIC相关护理机构或服务提供者申请。",
+      "age65OrDisability": "受照护者须年满65岁，或有残障/护理需要。",
+      "caregiverCourse": "主要照护者须选择并完成认可的照护培训课程。",
+      "mdwEmployerCheck": "这需要有外籍家庭帮佣（MDW）雇主，且受照护者与帮佣住在同一地址。",
+      "idapeAgeCoverage": "乐龄临时伤残援助计划（IDAPE）适用于因年龄或原有残障而无法从ElderShield受益的较年长公民。",
+      "policyholderCheck": "须通过公积金、保险公司或Singpass确认保单或受保身份。",
       "careServices": "AIC 列出居家、中心、诊所、疗养院、临终关怀、心理健康和 ACP 护理服务。"
     },
     "schemes": {
@@ -917,9 +917,9 @@
         ]
       },
       "mdw_levy": {
-        "title": "MDW Levy Concession for Persons with Disabilities",
-        "summary": "Lower monthly levy for households employing a migrant domestic worker to care for a person with disability who needs help with daily activities.",
-        "next": "Get MOM approval to hire the MDW first, then apply through AIC eFASS or AIC Link.",
+        "title": "残障人士外籍家庭帮佣（MDW）劳工税优惠",
+        "summary": "如果家庭聘请外籍家庭帮佣照顾在日常活动上需要协助的残障人士，可支付较低的每月劳工税。",
+        "next": "先取得人力部（MOM）批准聘请外籍家庭帮佣（MDW），再通过AIC eFASS或AIC Link申请。",
         "tags": [
           "Caregiving"
         ]
@@ -957,9 +957,9 @@
         ]
       },
       "care_services": {
-        "title": "AIC care services",
-        "summary": "AIC care services help seniors and caregivers find home care, centre or clinic care, nursing home or hospice care, mental health services, and Advance Care Planning.",
-        "next": "Call AIC or visit AIC care services to find suitable services near home.",
+        "title": "AIC护理服务",
+        "summary": "AIC护理服务帮助年长者和照护者寻找居家护理、中心或诊所护理、疗养院或临终关怀、心理健康服务，以及预先护理计划。",
+        "next": "致电AIC或浏览AIC护理服务，寻找住家附近合适的服务。",
         "tags": [
           "Care services"
         ]
@@ -1278,13 +1278,13 @@
       "severeDisability": "Anda memilih kurang upaya teruk, biasanya 3+ aktiviti harian.",
       "chronic": "Anda memilih keperluan penjagaan kronik.",
       "preventiveCare": "Penjagaan pencegahan dan Healthier SG mungkin membantu walaupun tiada penyakit kronik.",
-      "meansTest": "This scheme uses household income, Annual Value, or other means-test checks.",
-      "providerApply": "Application usually goes through an AIC-linked care provider or service provider.",
-      "age65OrDisability": "The care recipient is aged 65+ or has disability/care needs.",
-      "caregiverCourse": "A main caregiver must choose and complete an approved caregiver training course.",
-      "mdwEmployerCheck": "This requires an MDW employer and care recipient living at the same address.",
-      "idapeAgeCoverage": "IDAPE is for older Citizens who could not benefit from ElderShield because of age or pre-existing disability.",
-      "policyholderCheck": "Coverage or policyholder status must be checked through CPF, insurer, or Singpass.",
+      "meansTest": "Skim ini menggunakan pendapatan isi rumah, Nilai Tahunan, atau semakan kemampuan lain.",
+      "providerApply": "Permohonan biasanya dibuat melalui penyedia jagaan atau perkhidmatan yang berkaitan dengan AIC.",
+      "age65OrDisability": "Penerima jagaan berumur 65 tahun ke atas atau mempunyai kurang upaya/keperluan jagaan.",
+      "caregiverCourse": "Penjaga utama mesti memilih dan melengkapkan kursus latihan penjaga yang diluluskan.",
+      "mdwEmployerCheck": "Ini memerlukan majikan pekerja domestik migran (MDW) dan penerima jagaan tinggal di alamat yang sama.",
+      "idapeAgeCoverage": "Program Bantuan Hilang Upaya Interim untuk Warga Emas (IDAPE) ialah untuk Warganegara lebih tua yang tidak dapat menerima manfaat ElderShield kerana umur atau kurang upaya sedia ada.",
+      "policyholderCheck": "Status perlindungan atau pemegang polisi mesti disemak melalui CPF, syarikat insurans, atau Singpass.",
       "careServices": "AIC menyenaraikan perkhidmatan jagaan di rumah, pusat, klinik, rumah jagaan, hospis, kesihatan mental, dan ACP."
     },
     "schemes": {
@@ -1434,9 +1434,9 @@
         ]
       },
       "mdw_levy": {
-        "title": "MDW Levy Concession for Persons with Disabilities",
-        "summary": "Lower monthly levy for households employing a migrant domestic worker to care for a person with disability who needs help with daily activities.",
-        "next": "Get MOM approval to hire the MDW first, then apply through AIC eFASS or AIC Link.",
+        "title": "Konsesi Levi Pekerja Domestik Migran (MDW) untuk Orang Kurang Upaya",
+        "summary": "Levi bulanan yang lebih rendah untuk isi rumah yang menggaji pekerja domestik migran bagi menjaga orang kurang upaya yang perlukan bantuan dalam aktiviti harian.",
+        "next": "Dapatkan kelulusan Kementerian Tenaga Manusia (MOM) untuk menggaji pekerja domestik migran (MDW) dahulu, kemudian mohon melalui AIC eFASS atau AIC Link.",
         "tags": [
           "Caregiving"
         ]
@@ -1474,9 +1474,9 @@
         ]
       },
       "care_services": {
-        "title": "AIC care services",
-        "summary": "AIC care services help seniors and caregivers find home care, centre or clinic care, nursing home or hospice care, mental health services, and Advance Care Planning.",
-        "next": "Call AIC or visit AIC care services to find suitable services near home.",
+        "title": "Perkhidmatan jagaan AIC",
+        "summary": "Perkhidmatan jagaan AIC membantu warga emas dan penjaga mencari jagaan di rumah, jagaan pusat atau klinik, rumah jagaan atau hospis, perkhidmatan kesihatan mental, dan Perancangan Jagaan Awal.",
+        "next": "Hubungi AIC atau lawati perkhidmatan jagaan AIC untuk mencari perkhidmatan yang sesuai berhampiran rumah.",
         "tags": [
           "Care services"
         ]
@@ -1795,13 +1795,13 @@
       "severeDisability": "நீங்கள் கடுமையான இயலாமை தேர்ந்தெடுத்தீர்கள்; பொதுவாக 3+ அன்றாட செயல்கள்.",
       "chronic": "நீங்கள் நீண்டநாள் நோய் பராமரிப்பு தேவைத் தேர்ந்தெடுத்தீர்கள்.",
       "preventiveCare": "நீண்டநாள் நோய் இல்லாவிட்டாலும் தடுப்பு பராமரிப்பு மற்றும் Healthier SG உதவலாம்.",
-      "meansTest": "This scheme uses household income, Annual Value, or other means-test checks.",
-      "providerApply": "Application usually goes through an AIC-linked care provider or service provider.",
-      "age65OrDisability": "The care recipient is aged 65+ or has disability/care needs.",
-      "caregiverCourse": "A main caregiver must choose and complete an approved caregiver training course.",
-      "mdwEmployerCheck": "This requires an MDW employer and care recipient living at the same address.",
-      "idapeAgeCoverage": "IDAPE is for older Citizens who could not benefit from ElderShield because of age or pre-existing disability.",
-      "policyholderCheck": "Coverage or policyholder status must be checked through CPF, insurer, or Singpass.",
+      "meansTest": "இந்த திட்டம் குடும்ப வருமானம், ஆண்டு மதிப்பு, அல்லது பிற வருவாய் சோதனைகளைப் பயன்படுத்தும்.",
+      "providerApply": "விண்ணப்பம் பொதுவாக AIC தொடர்புடைய பராமரிப்பு வழங்குநர் அல்லது சேவை வழங்குநர் மூலம் செய்யப்படும்.",
+      "age65OrDisability": "பராமரிப்பு பெறுபவர் 65 வயது மேல் இருக்க வேண்டும், அல்லது இயலாமை/பராமரிப்பு தேவை இருக்க வேண்டும்.",
+      "caregiverCourse": "முக்கிய பராமரிப்பாளர் அங்கீகரிக்கப்பட்ட பராமரிப்பு பயிற்சி பாடத்திட்டத்தைத் தேர்ந்து முடிக்க வேண்டும்.",
+      "mdwEmployerCheck": "இதற்கு குடியேற்ற வீட்டு பணியாளர் (MDW) வேலைவாய்ப்பாளர் இருக்க வேண்டும்; பராமரிப்பு பெறுபவர் அதே முகவரியில் வாழ வேண்டும்.",
+      "idapeAgeCoverage": "மூத்தோருக்கான இடைக்கால இயலாமை உதவி திட்டம் (IDAPE) வயது அல்லது முன்பிருந்த இயலாமை காரணமாக ElderShield பயன் பெற முடியாத வயதான குடிமக்களுக்கு.",
+      "policyholderCheck": "காப்பீடு அல்லது பாலிசிதாரர் நிலை CPF, காப்பீட்டாளர், அல்லது Singpass மூலம் சரிபார்க்கப்பட வேண்டும்.",
       "careServices": "AIC வீடு, மையம், கிளினிக், நர்சிங் ஹோம், ஹாஸ்பிஸ், மனநலம், மற்றும் ACP பராமரிப்பு சேவைகளை பட்டியலிடுகிறது."
     },
     "schemes": {
@@ -1951,9 +1951,9 @@
         ]
       },
       "mdw_levy": {
-        "title": "MDW Levy Concession for Persons with Disabilities",
-        "summary": "Lower monthly levy for households employing a migrant domestic worker to care for a person with disability who needs help with daily activities.",
-        "next": "Get MOM approval to hire the MDW first, then apply through AIC eFASS or AIC Link.",
+        "title": "இயலாமை உள்ளவர்களுக்கான குடியேற்ற வீட்டு பணியாளர் (MDW) லெவி சலுகை",
+        "summary": "அன்றாட செயல்களில் உதவி தேவைப்படும் இயலாமை உள்ளவரைப் பராமரிக்க குடியேற்ற வீட்டு பணியாளரை நியமிக்கும் குடும்பங்களுக்கு குறைந்த மாதாந்திர லெவி.",
+        "next": "முதலில் மனிதவள அமைச்சகம் (MOM) மூலம் குடியேற்ற வீட்டு பணியாளர் (MDW) நியமிப்பு அனுமதி பெறுங்கள்; பிறகு AIC eFASS அல்லது AIC Link மூலம் விண்ணப்பிக்கவும்.",
         "tags": [
           "Caregiving"
         ]
@@ -1991,9 +1991,9 @@
         ]
       },
       "care_services": {
-        "title": "AIC care services",
-        "summary": "AIC care services help seniors and caregivers find home care, centre or clinic care, nursing home or hospice care, mental health services, and Advance Care Planning.",
-        "next": "Call AIC or visit AIC care services to find suitable services near home.",
+        "title": "AIC பராமரிப்பு சேவைகள்",
+        "summary": "AIC பராமரிப்பு சேவைகள் மூத்தோர் மற்றும் பராமரிப்பாளர்கள் வீட்டு பராமரிப்பு, மையம் அல்லது கிளினிக் பராமரிப்பு, நர்சிங் ஹோம் அல்லது ஹாஸ்பிஸ் பராமரிப்பு, மனநலம் சேவைகள், மற்றும் முன்கூட்டிய பராமரிப்பு திட்டமிடலைக் கண்டுபிடிக்க உதவும்.",
+        "next": "AIC ஐ அழைக்கவும் அல்லது AIC பராமரிப்பு சேவைகள் தளத்தைப் பார்வையிட்டு வீட்டருகே பொருத்தமான சேவைகளைத் தேடவும்.",
         "tags": [
           "Care services"
         ]
